@@ -426,14 +426,14 @@ are identified:
  <tr>
 	<td>range below the value</td>
 	<td>Up to the specified value</td>
-  <td>The range below 2.0 includes any value less or equal to &lt;2.00000000000000000000<br/>
+  <td>The range below 2.0 includes any value less than 2.00000000000000000000<br/>
       The range before 2015-08-12T05:23:45 includes any time up to 2015-08-12T05:23:45.000000000000000</td>
  </tr>
  <tr>
 	<td>range above the value</td>
 	<td>The specified value and up</td>
-  <td>The range above 2.0 includes any value greater or equal to &lt;2.00000000000000000000<br/>
-      The range after 2015-08-12T05:23:45 includes any time after 2015-08-12T05:23:45.000000000000000</td>
+  <td>The range above 2.0 includes any value greater or equal to 2.00000000000000000000<br/>
+      The range after 2015-08-12T05:23:45 includes any time after 2015-08-12T05:23:45.000000000000000 (inclusive)</td>
  </tr>
 </table>
 <p>
@@ -1096,7 +1096,7 @@ This search returns no only all procedures that occurred at location with id 42,
 that occurred in locations that are part of location with id 42. 
 </p>
 <pre>
-GET [base]/MedicationAdministration?encounter:above=21
+GET [base]/MedicationAdministration?context:above=21
 </pre>
 <p>
 Returns all medication administrations that happened during encounter with id 21 or during any "parent" 
@@ -1697,8 +1697,8 @@ iteratively, so it will retrieve observations that are directly related, and
 also any related observations to any other included observation.
 </p>
 <pre>
-GET [base]/Observation?_include=Observation:related-target&amp;criteria...
-GET [base]/Observation?_include:iterate=Observation:related-target&amp;criteria...
+GET [base]/Observation?_include=Observation:hasMember&amp;criteria...
+GET [base]/Observation?_include:iterate=Observation:hasMember&amp;criteria...
 </pre>
 <p>
 Both <code>_include</code> and <code>_revinclude</code> use the wild card "*" for the search parameter

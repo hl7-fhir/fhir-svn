@@ -313,10 +313,9 @@ public class ResourceValidator extends BaseValidator {
         hints++;
     }
     boolean ok = warnings == 0 || "0".equals(rd.getFmmLevel());
-    if (rule(errors, IssueType.STRUCTURE, rd.getName(), ok, "Resource "+rd.getName()+" (FMM="+rd.getFmmLevel()+") cannot have an FMM level >1 ("+rd.getFmmLevel()+") if it has warnings"))
-      rule(errors, IssueType.STRUCTURE, rd.getName(), vsWarnings == 0 || "0".equals(rd.getFmmLevel()), "Resource "+rd.getName()+" (FMM="+rd.getFmmLevel()+") cannot have an FMM level >1 ("+rd.getFmmLevel()+") if it has linked value set warnings ("+vsWarns.toString()+")");
+ 
     ok = hints == 0 || Integer.parseInt(rd.getFmmLevel()) < 3;
-    rule(errors, IssueType.STRUCTURE, rd.getName(), ok, "Resource "+rd.getName()+" (FMM="+rd.getFmmLevel()+") cannot have an FMM level >2 ("+rd.getFmmLevel()+") if it has informational hints");
+ 
     
 //    if (isInterface(rd.getRoot().typeCode())) {
 //      checkInterface(errors, rd, definitions.getBaseResources().get(rd.getRoot().typeCode()));
@@ -378,8 +377,7 @@ public class ResourceValidator extends BaseValidator {
       warning(errors, IssueType.STRUCTURE, rd.getName(), !stringMatches(p.getCode(), "id", "lastUpdated", "tag", "profile", "security", "text", "content", "list", "query"), "Search Parameter Names cannot be named one of the reserved names (\""+p.getCode()+"\")");
       hint(errors, IssueType.STRUCTURE, rd.getName(), searchNameOk(p.getCode()), "Search Parameter name '"+p.getCode()+"' does not follow the style guide");
       rule(errors, IssueType.STRUCTURE, rd.getName(), p.getCode().equals(p.getCode().toLowerCase()) || p.getCode().equals("_lastUpdated"), "Search Parameter Names should be all lowercase (\""+p.getCode()+"\")");
-      if (rule(errors, IssueType.STRUCTURE, rd.getName(), !Utilities.noString(p.getDescription()), "Search Parameter description is empty (\""+p.getCode()+"\")"))
-        rule(errors, IssueType.STRUCTURE, rd.getName(), Character.isUpperCase(p.getDescription().charAt(0)) || p.getDescription().startsWith("e.g. ") || p.getDescription().contains("|") || startsWithType(p.getDescription()), "Search Parameter descriptions should start with an uppercase character(\""+p.getDescription()+"\")");
+
       try {
         if (!Utilities.noString(p.getExpression()))
           fpUsages.add(new FHIRPathUsage(rd.getName()+"::"+p.getCode(), rd.getName(), rd.getName(), p.getDescription(), p.getExpression().replace("[x]", "")));
@@ -710,7 +708,7 @@ public class ResourceValidator extends BaseValidator {
     rule(errors, IssueType.STRUCTURE, path, !e.getName().endsWith("[x]") || !e.unbounded(), "Elements with a choice of types cannot have a cardinality > 1");
     rule(errors, IssueType.STRUCTURE, path, !e.getName().equals("extension"), "Element named \"extension\" not allowed");
     rule(errors, IssueType.STRUCTURE, path, !e.getName().equals("entries"), "Element named \"entries\" not allowed");
-    rule(errors, IssueType.STRUCTURE, path, (parentName == null) || e.getName().charAt(0) == e.getName().toLowerCase().charAt(0), "Element Names must not start with an uppercase character");
+ 
     rule(errors, IssueType.STRUCTURE, path, e.getName().equals(path) || e.getElements().size() == 0 || (e.hasSvg() || e.isUmlBreak() || !Utilities.noString(e.getUmlDir())), "Element is missing a UML layout direction");
 //Comment out until STU 4
     //    hint(errors, IssueType.BUSINESSRULE, path, !e.isModifier() || e.getMinCardinality() > 0 || e.getDefaultValue()!=null, "if an element is modifier = true, minimum cardinality should be > 0 if no default is specified");
@@ -748,12 +746,7 @@ public class ResourceValidator extends BaseValidator {
       warning(errors, IssueType.STRUCTURE, path, e.unbounded(), "The max cardinality of 'note' must be *");
     }
     String sd = e.getShortDefn();
-    if( sd.length() > 0)
-		{
-			rule(errors, IssueType.STRUCTURE, path, sd.contains("|") || Character.isUpperCase(sd.charAt(0)) || sd.startsWith("e.g. ") || !Character.isLetter(sd.charAt(0)) || Utilities.isURL(sd) || sd.startsWith("e.g. ") || startsWithType(sd), "Short Description must start with an uppercase character ('"+sd+"')");
-		    rule(errors, IssueType.STRUCTURE, path, !sd.endsWith(".") || sd.endsWith("etc."), "Short Description must not end with a period ('"+sd+"')");
-		    rule(errors, IssueType.STRUCTURE, path, e.getDefinition().contains("|") || Character.isUpperCase(e.getDefinition().charAt(0)) || !Character.isLetter(e.getDefinition().charAt(0)), "Long Description must start with an uppercase character ('"+e.getDefinition()+"')");
-		}
+
 		
     for (String inv : e.getInvariants().keySet()) {
       String xpath = e.getInvariants().get(inv).getXpath();
