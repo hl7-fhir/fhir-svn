@@ -45,7 +45,7 @@
       <type value="string"/>
       <item>
         <linkId value="M0018.1"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <required value="true"/>
         <answerOption>
           <valueCoding>
@@ -80,7 +80,7 @@
       <required value="true"/>
       <item>
         <linkId value="M0030.1"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <required value="true"/>
         <answerOption>
           <valueCoding>
@@ -120,7 +120,7 @@
       <type value="string"/>
       <item>
         <linkId value="M0063.1"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <required value="true"/>
         <answerOption>
           <valueCoding>
@@ -139,7 +139,7 @@
       <type value="string"/>
       <item>
         <linkId value="M0064.1"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <required value="true"/>
         <answerOption>
           <valueCoding>
@@ -155,7 +155,7 @@
       <type value="string"/>
       <item>
         <linkId value="M0065.1"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <required value="true"/>
         <answerOption>
           <valueCoding>
@@ -177,7 +177,7 @@
     <item>
       <linkId value="M0069"/>
       <text value="Gender"/>
-      <type value="choice"/>
+      <type value="coding"/>
       <required value="true"/>
       <answerOption>
         <valueCoding>
@@ -195,7 +195,7 @@
     <item>
       <linkId value="M0140"/>
       <text value="Race/Ethnicity"/>
-      <type value="choice"/>
+      <type value="coding"/>
       <required value="true"/>
       <repeats value="true"/>
       <answerOption>
@@ -238,7 +238,7 @@
     <item>
       <linkId value="M0150"/>
       <text value="Current Payment Sources for Home Care"/>
-      <type value="choice"/>
+      <type value="coding"/>
       <required value="true"/>
       <repeats value="true"/>
       <answerOption>

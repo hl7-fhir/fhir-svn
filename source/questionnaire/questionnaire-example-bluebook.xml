@@ -49,7 +49,7 @@
       <item>
         <linkId value="sex"/>
         <text value="Sex"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <answerOption>
           <valueCoding>
             <code value="F"/>
@@ -79,7 +79,7 @@
       <item>
         <linkId value="vitaminKgiven"/>
         <text value="Vitamin K given"/>
-        <type value="choice"/>
+        <type value="coding"/>
         <answerOption>
           <valueCoding>
             <code value="INJECTION"/>

@@ -637,7 +637,7 @@ maxLength</a>
        style="fill:#000000"><a
    xlink:href="questionnaire-definitions.html#Questionnaire.item.answerValueSet"
    id="n997"><title
-   id="title198">A reference to a value set containing a list of codes representing permitted answers for a &quot;choice&quot; or &quot;open-choice&quot; question</title>
+   id="title198">A reference to a value set containing a list of codes representing permitted answers for a question</title>
 answerValueSet</a>
  : <a
    xlink:href="datatypes.html#canonical"
@@ -1025,7 +1025,7 @@ enableWhen</a>
     <a
        xlink:href="questionnaire-definitions.html#Questionnaire.item.answerOption"
        id="n1151"><title
-   id="title304">One of the permitted answers for a &quot;choice&quot; or &quot;open-choice&quot; question</title>
+   id="title304">One of the permitted answers for a question</title>
 answerOption</a>
   </text>
   <text

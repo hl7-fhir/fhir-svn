@@ -30,12 +30,12 @@
 		<concept>
 			<code value="table"/>
 			<display value="Vertical Answer Table"/>
-			<definition value="Questions within the group are rows in the table with possible answers as columns.  Used for 'choice' questions."/>
+			<definition value="Questions within the group are rows in the table with possible answers as columns.  Used for questions that provide a constrained list of answers."/>
 		</concept>
 		<concept>
 			<code value="htable"/>
 			<display value="Horizontal Answer Table"/>
-			<definition value="Questions within the group are columns in the table with possible answers as rows.  Used for 'choice' questions."/>
+			<definition value="Questions within the group are columns in the table with possible answers as rows.  Used for questions that provide a constrained list of answers."/>
 		</concept>
 		<concept>
 			<code value="gtable"/>

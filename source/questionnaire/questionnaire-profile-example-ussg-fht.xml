@@ -154,7 +154,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.1.2"/>
 							<definition value="http://loinc.org/rdf#54131-8"/>
 							<text value="Gender"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<required value="true"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL1-9"/>
 							<item>
@@ -174,7 +174,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.1.4"/>
 							<definition value="http://loinc.org/rdf#54132-6"/>
 							<text value="Were you born a twin?"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL623-0"/>
 							<initial>
                 <valueCoding>
@@ -188,14 +188,14 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.1.5"/>
 							<definition value="http://loinc.org/rdf#54128-4"/>
 							<text value="Were you adopted?"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL361-7"/>
 						</item>
 						<item>
 							<linkId value="1.1.6"/>
 							<definition value="http://loinc.org/rdf#54135-9"/>
 							<text value="Are your parents related to each other in any way other than marriage?"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL361-7"/>
 						</item>
 						<item>
@@ -207,7 +207,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<item>
 								<linkId value="1.1.7.1.1"/>
 								<text value="Units"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="#length"/>
 							</item>
 						</item>
@@ -219,7 +219,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<item>
 								<linkId value="1.1.8.1.1"/>
 								<text value="Units"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="#weight"/>
 							</item>
 						</item>
@@ -235,7 +235,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.1.10"/>
 							<definition value="http://loinc.org/rdf#54134-2"/>
 							<text value="Race"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<required value="true"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL629-7"/>
 						</item>
@@ -243,7 +243,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.1.11"/>
 							<definition value="http://loinc.org/rdf#54133-4"/>
 							<text value="Ethnicity"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<repeats value="true"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL628-9"/>
 						</item>
@@ -258,14 +258,14 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 							<linkId value="1.2.1"/>
 							<definition value="http://loinc.org/rdf#54140-9"/>
 							<text value="Disease or Condition"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL626-3"/>
 						</item>
 						<item>
 							<linkId value="1.2.2"/>
 							<definition value="http://loinc.org/rdf#54130-0"/>
 							<text value="Age at Diagnosis"/>
-							<type value="choice"/>
+							<type value="coding"/>
 							<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL619-8"/>
 						</item>
 					</item>
@@ -296,7 +296,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.1.1"/>
 								<definition value="http://loinc.org/rdf#54136-7"/>
 								<text value="Relationship to you"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL621-4"/>
 							</item>
 							<item>
@@ -309,7 +309,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.1.3"/>
 								<definition value="http://loinc.org/rdf#54123-5"/>
 								<text value="Gender"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL1-9"/>
 								<item>
 									<linkId value="2.1.1.3.1.1"/>
@@ -322,7 +322,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.1.4"/>
 								<definition value="http://loinc.org/rdf#54139-1"/>
 								<text value="Living?"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL361-7"/>
 								<item>
 									<linkId value="2.1.1.4.1"/>
@@ -331,7 +331,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 										<linkId value="2.1.1.4.1.1"/>
 										<definition value="http://loinc.org/rdf#54112-8"/>
 										<text value="Cause of Death"/>
-										<type value="choice"/>
+										<type value="coding"/>
 										<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL627-1"/>
 										<item>
 											<linkId value="2.1.1.4.1.1.1"/>
@@ -343,7 +343,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 										<linkId value="2.1.1.4.1.2"/>
 										<definition value="http://loinc.org/rdf#54113-6"/>
 										<text value="Age at Death"/>
-										<type value="choice"/>
+										<type value="coding"/>
 										<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL619-8"/>
 									</item>
 								</item>
@@ -368,21 +368,21 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.1.5"/>
 								<definition value="http://loinc.org/rdf#54121-9"/>
 								<text value="Was this person born a twin?"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL623-0"/>
 							</item>
 							<item>
 								<linkId value="2.1.1.6"/>
 								<definition value="http://loinc.org/rdf#54122-7"/>
 								<text value="Was this person adopted?"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL623-0"/>
 							</item>
 							<item>
 								<linkId value="2.1.1.7"/>
 								<definition value="http://loinc.org/rdf#54119-3"/>
 								<text value="Race"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<repeats value="true"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL629-7"/>
 							</item>
@@ -390,7 +390,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.1.8"/>
 								<definition value="http://loinc.org/rdf#54120-1"/>
 								<text value="Ethnicity"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<repeats value="true"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL628-9"/>
 							</item>
@@ -405,7 +405,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.2.1"/>
 								<definition value="http://loinc.org/rdf#54116-9"/>
 								<text value="Disease or Condition"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<required value="true"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL626-3"/>
 							</item>
@@ -413,7 +413,7 @@ Note: The URLs used for LOINC objects have not been approved by the LOINC organi
 								<linkId value="2.1.2.2"/>
 								<definition value="http://loinc.org/rdf#54115-1"/>
 								<text value="Age at Diagnosis"/>
-								<type value="choice"/>
+								<type value="coding"/>
 								<answerValueSet value="http://hl7.org/fhir/us/sdc/ValueSet/LL619-8"/>
 							</item>
 							<item>

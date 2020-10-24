@@ -479,7 +479,7 @@
       <item>
         <linkId value="1" />
         <text value="Reason for Cardiology Consult" />
-        <type value="choice" />
+        <type value="coding" />
         <required value="true" />
         <repeats value="true" />
         <answerValueSet value="#CardiologyReferralReasonValues" />

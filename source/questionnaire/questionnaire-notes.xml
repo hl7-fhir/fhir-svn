@@ -184,12 +184,8 @@ Where the names are the same (ignoring case), the "answer" must use the specifie
       <td><a href="datatypes.html#uri">uri</a></td>
     </tr>
     <tr>
-      <td>choice</td>
-      <td><a href="datatypes.html#Coding">Coding</a></td>
-    </tr>
-    <tr>
-      <td>open-choice</td>
-      <td><a href="datatypes.html#Coding">Coding</a> (if choosing from one of the listed choices) or <a href="datatypes.html#string">string</a> (if a different value is provided)</td>
+      <td>coding</td>
+      <td>If <code>choiceConstraint</code> is 'optionOrString', <a href="datatypes.html#Coding">Coding</a> (if choosing from one of the listed choices) or <a href="datatypes.html#string">string</a> (if a different value is provided)</td>
     </tr>
   </tbody>
 </table>
