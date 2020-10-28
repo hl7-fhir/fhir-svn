@@ -25,4 +25,9 @@
     <display value="Help"/>
     <definition value="The text provides additional guidance on populating the containing item.  Help text isn't necessarily expected to be rendered as part of the form, but may instead be made available through fly-over, pop-up button, link to a &quot;help&quot; page, etc."/>
   </concept>
+  <concept>
+    <code value="legal"/>
+    <display value="Legal"/>
+    <definition value="Indicates copyright, trademark, patent, regulations regarding completion, retention or use, or other legal text related to the item."/>
+  </concept>
 </CodeSystem>
