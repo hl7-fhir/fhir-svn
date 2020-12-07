@@ -597,6 +597,9 @@
 	<item id="MedicinalProductDefinition">
 		<translation lang="en">MedicinalProductDefinition</translation>
 	</item>
+	<item id="MedicationDefinition">
+		<translation lang="en">MedicationDefinition</translation>
+	</item>
 	<item id="RegulatedPackagedProduct">
 		<translation lang="en">RegulatedPackagedProduct</translation>
 	</item>

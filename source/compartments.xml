@@ -776,6 +776,9 @@
    <Row>
     <Cell><Data ss:Type="String">InventoryReport</Data></Cell>
    </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MedicationDefinition</Data></Cell>
+   </Row>
    <Row ss:Index="145">
     <Cell><Data ss:Type="String">EvidenceVariable</Data></Cell>
    </Row>
@@ -814,7 +817,7 @@
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>118</TopRowBottomPane>
+   <TopRowBottomPane>136</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    
    <ProtectObjects>False</ProtectObjects>
