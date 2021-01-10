@@ -1,4 +1,5 @@
-[![Build Status](https://dev.azure.com/fhir-build/build.fhir.org/_apis/build/status/FHIR%20CI%20Build)](https://dev.azure.com/fhir-build/build.fhir.org/_build/latest?definitionId=3)
+[![Build Status](https://dev.azure.com/fhir-build/build.fhir.org/_apis/build/status/FHIR%20CI%20Build)](https://dev.azure.com/fhir-build/build.fhir.org/_build/latest?definitionId=3) [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://chat.fhir.org) [![Stack Exchange monthly questions](https://img.shields.io/stackexchange/stackoverflow/qm/%5Bhl7-fhir%5D?color=green)](https://stackoverflow.com/tags/hl7-fhir)
+
 
 ### To run the FHIR Publisher
 First ensure that [ant 1.9+](http://ant.apache.org/bindownload.cgi) is installed on your system.
