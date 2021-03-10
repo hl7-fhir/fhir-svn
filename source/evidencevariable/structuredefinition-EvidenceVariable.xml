@@ -150,6 +150,27 @@
         <map value="no-gen-base"/>
       </mapping>
     </element>
+    <element id="EvidenceVariable.copyright">
+      <path value="EvidenceVariable.copyright"/>
+      <short value="Use and/or publishing restrictions"/>
+      <definition value="A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}."/>
+      <requirements value="Consumers must be able to determine any legal restrictions on the use of the {{title}} and/or its content."/>
+      <alias value="License"/>
+      <alias value="Restrictions"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="markdown"/>
+      </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.copyright"/>
+      </mapping>
+      <mapping>
+        <identity value="objimpl"/>
+        <map value="no-gen-base"/>
+      </mapping>
+    </element>
     <element id="EvidenceVariable.version">
       <path value="EvidenceVariable.version"/>
       <short value="Business version of the evidence variable"/>
@@ -255,6 +276,27 @@
         <map value="FiveWs.status"/>
       </mapping>
     </element>
+    <element id="EvidenceVariable.experimental">
+      <path value="EvidenceVariable.experimental"/>
+      <short value="For testing purposes, not real usage"/>
+      <definition value="A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage."/>
+      <comment value="Allows filtering of {{title}}s that are appropriate for use versus not."/>
+      <requirements value="Enables experimental content to be developed following the same lifecycle that would be used for a production-level {{title}}."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.experimental"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.class"/>
+      </mapping>
+    </element>
     <element id="EvidenceVariable.date">
       <path value="EvidenceVariable.date"/>
       <short value="Date last changed"/>
@@ -317,6 +359,45 @@
       <mapping>
         <identity value="workflow"/>
         <map value="Definition.useContext"/>
+      </mapping>
+    </element>
+    <element id="EvidenceVariable.approvalDate">
+      <path value="EvidenceVariable.approvalDate"/>
+      <short value="When the summary was approved by publisher"/>
+      <definition value="The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage."/>
+      <comment value="The &#39;date&#39; element may be more recent than the approval date because of minor changes or editorial corrections."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="date"/>
+      </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.approvalDate"/>
+      </mapping>
+      <mapping>
+        <identity value="objimpl"/>
+        <map value="no-gen-base"/>
+      </mapping>
+    </element>
+    <element id="EvidenceVariable.lastReviewDate">
+      <path value="EvidenceVariable.lastReviewDate"/>
+      <short value="When the summary was last reviewed"/>
+      <definition value="The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date."/>
+      <comment value="If specified, this date follows the original approval date."/>
+      <requirements value="Gives a sense of how &quot;current&quot; the content is.  Resources that have not been reviewed in a long time may have a risk of being less appropriate/relevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="date"/>
+      </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.lastReviewDate"/>
+      </mapping>
+      <mapping>
+        <identity value="objimpl"/>
+        <map value="no-gen-base"/>
       </mapping>
     </element>
     <element id="EvidenceVariable.publisher">

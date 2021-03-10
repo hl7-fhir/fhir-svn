@@ -153,7 +153,7 @@
 			</type>
 			<rating>
 				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
 					<code value="no-concern"/>
 					<display value="no serious concern"/>
 				</coding>
@@ -170,7 +170,7 @@
 			</type>
 			<rating>
 				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
 					<code value="no-concern"/>
 					<display value="no serious concern"/>
 				</coding>
@@ -186,7 +186,7 @@
 			</type>
 			<rating>
 				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
 					<code value="no-concern"/>
 					<display value="no serious concern"/>
 				</coding>
@@ -203,7 +203,7 @@
 			</type>
 			<rating>
 				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
 					<code value="no-concern"/>
 					<display value="no serious concern"/>
 				</coding>
@@ -219,7 +219,7 @@
 			</type>
 			<rating>
 				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
 					<code value="no-concern"/>
 					<display value="no serious concern"/>
 				</coding>

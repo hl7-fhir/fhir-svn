@@ -64,4 +64,16 @@
       <display value="Risk of mRS3-6 at 90 days after Alteplase for Stroke if ASTRAL score 12"/>
     </item>
   </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY)"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="evidence-example-remdesivir"/>
+    </extension>
+    <item>
+      <reference value="Evidence/evidence-example-remdesivir"/>
+      <display value="14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY)"/>
+    </item>
+  </entry>
 </List>

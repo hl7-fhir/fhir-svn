@@ -144,6 +144,27 @@
         <map value="no-gen-base"/>
       </mapping>
     </element>
+    <element id="Evidence.copyright">
+      <path value="Evidence.copyright"/>
+      <short value="Use and/or publishing restrictions"/>
+      <definition value="A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}."/>
+      <requirements value="Consumers must be able to determine any legal restrictions on the use of the {{title}} and/or its content."/>
+      <alias value="License"/>
+      <alias value="Restrictions"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="markdown"/>
+      </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.copyright"/>
+      </mapping>
+      <mapping>
+        <identity value="objimpl"/>
+        <map value="no-gen-base"/>
+      </mapping>
+    </element>
     <element id="Evidence.version">
       <path value="Evidence.version"/>
       <short value="Business version of this summary"/>
@@ -163,6 +184,20 @@
         <identity value="w5"/>
         <map value="FiveWs.version"/>
       </mapping>
+    </element>
+    <element id="Evidence.name">
+      <path value="Evidence.name"/>
+      <short value="Name for this {{title}} (computer friendly)"/>
+      <definition value="A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation."/>
+      <comment value="The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly."/>
+      <requirements value="Support human navigation and code generation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <condition value="cnl-0"/>
+      <isSummary value="true"/>
     </element>
     <element id="Evidence.title">
       <path value="Evidence.title"/>
@@ -228,6 +263,27 @@
       <mapping>
         <identity value="w5"/>
         <map value="FiveWs.status"/>
+      </mapping>
+    </element>
+    <element id="Evidence.experimental">
+      <path value="Evidence.experimental"/>
+      <short value="For testing purposes, not real usage"/>
+      <definition value="A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage."/>
+      <comment value="Allows filtering of {{title}}s that are appropriate for use versus not."/>
+      <requirements value="Enables experimental content to be developed following the same lifecycle that would be used for a production-level {{title}}."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Definition.experimental"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.class"/>
       </mapping>
     </element>
     <element id="Evidence.date">

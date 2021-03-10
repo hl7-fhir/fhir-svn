@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Evidence xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/evidence.xsd">
+	<id value="evidence-example-remdesivir"/>
+	<meta>
+		<versionId value="3"/>
+	</meta>
+	<url value="https://fevir.net/resources/Evidence/55"/>
+	<identifier>
+		<system value="https://gps.health/coka"/>
+		<value value="143"/>
+		<assigner>
+			<display value="COVID-19 Knowledge Accelerator"/>
+		</assigner>
+	</identifier>
+	<identifier>
+		<type>
+			<text value="resource identifier"/>
+		</type>
+		<system value="https://fevir.net"/>
+		<value value="55"/>
+		<assigner>
+			<display value="Computable Publishing LLC"/>
+		</assigner>
+	</identifier>
+	<copyright value="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+	<version value="3"/>
+	<title value="14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY)"/>
+	<citeAsReference>
+		<reference value="https://computablepublishing.us/fevir/resources/Citation/36413"/>
+		<type value="Citation"/>
+		<display value="Alper BS, Dehnbostel J, Shahin K. 14-day mortality remdesivir vs placebo meta-analysis (ACTT-1, Wang et al, WHO SOLIDARITY).  COVID-19 Knowledge Accelerator Evidence Resources, entry 143, version 3. Created 2020 Dec 17. Revised 2020 Dec 21. Computable resource at: https://computablepublishing.us/fevir/resources/Evidence/RemdesivirExampleWithSOLIDARITY?version=3"/>
+	</citeAsReference>
+	<status value="active"/>
+	<date value="2020-12-17"/>
+	<publisher value="Computable Publishing LLC"/>
+	<contact>
+		<telecom>
+			<system value="email"/>
+			<value value="support@computablepublishing.com"/>
+		</telecom>
+	</contact>
+	<author>
+		<name value="Brian S. Alper"/>
+	</author>
+	<relatedArtifact>
+		<type value="citation"/>
+		<display value="Remdesivir in adults with severe COVID-19: a randomised, double-blind, placebo-controlled, multicentre trial"/>
+		<resource value="http://computablepublishing.us/fevir/resources/Citation/4932"/>
+	</relatedArtifact>
+	<relatedArtifact>
+		<type value="citation"/>
+		<display value="Remdesivir for the Treatment of Covid-19 - Final Report"/>
+		<uri value="https://www.nejm.org/doi/10.1056/NEJMoa2007764"/>
+	</relatedArtifact>
+	<relatedArtifact>
+		<type value="citation"/>
+		<display value="Repurposed Antiviral Drugs for Covid-19 — Interim WHO Solidarity Trial Results"/>
+		<uri value="https://www.nejm.org/doi/full/10.1056/NEJMoa2023184"/>
+	</relatedArtifact>
+	<description value="COVID-19 pneumonia remdesivir vs. placebo 14-day mortality (779 events among 6,744 participants, 3 randomized trials); Risk ratio 0.85 (95% CI 0.74 to 0.96) in fixed-effect analysis; Risk ratio 0.81 (95% CI 0.60 to 1.08) in random-effects analysis"/>
+	<assertion value="Remdesivir might reduce 14-day mortality, but this finding has not been repeated in a second trial (Low certainty)"/>
+	<variableDefinition>
+		<description value="Adults with COVID-19 pneumonia admitted to hospital"/>
+		<variableRole>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+				<version value="4.2.0"/>
+				<code value="population"/>
+				<display value="population"/>
+				<userSelected value="true"/>
+			</coding>
+		</variableRole>
+		<observed>
+			<type value="EvidenceVariable"/>
+			<display value="Effect Estimates for Mortality at 14 days from COVID19 Remdesivir vs. Placebo RCTs (Biegel 2020 data 35/541 vs. 61/521) (Wang 2020 data 15/153 vs. 7/78) (SOLIDARITY data 219/2743 vs. 219/2708)"/>
+		</observed>
+		<intended>
+			<reference value="https://gps.health/coka/resources/Group/5"/>
+			<type value="Group"/>
+			<display value="COVID-19PneumoniaHospitalizedAdult"/>
+		</intended>
+		<directnessMatch>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/directness"/>
+				<version value="4.2.0"/>
+				<code value="high"/>
+				<display value="High quality match"/>
+				<userSelected value="true"/>
+			</coding>
+		</directnessMatch>
+	</variableDefinition>
+	<variableDefinition>
+		<description value="Remdesivir IV 200 mg once then 100 mg once daily for 9 days"/>
+		<variableRole>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+				<version value="4.2.0"/>
+				<code value="exposure"/>
+				<display value="exposure"/>
+				<userSelected value="true"/>
+			</coding>
+		</variableRole>
+		<observed>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/16"/>
+			<type value="EvidenceVariable"/>
+			<display value="Remdesivir IV 200 mg once then 100 mg once daily for 9 days"/>
+		</observed>
+		<intended>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/12"/>
+			<type value="EvidenceVariable"/>
+			<display value="Remdesivir"/>
+		</intended>
+	</variableDefinition>
+	<variableDefinition>
+		<description value="Placebo"/>
+		<note>
+			<text value="SOLIDARITY trial did not use placebo in control group"/>
+		</note>
+		<variableRole>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+				<version value="4.2.0"/>
+				<code value="referenceExposure"/>
+				<display value="reference exposure"/>
+				<userSelected value="true"/>
+			</coding>
+		</variableRole>
+		<observed>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/13"/>
+			<type value="EvidenceVariable"/>
+			<display value="Placebo"/>
+		</observed>
+		<intended>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/13"/>
+			<type value="EvidenceVariable"/>
+			<display value="Placebo"/>
+		</intended>
+	</variableDefinition>
+	<variableDefinition>
+		<description value="Mortality at 14 days"/>
+		<variableRole>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/variable-role"/>
+				<version value="4.2.0"/>
+				<code value="measuredVariable"/>
+				<display value="measured variable"/>
+				<userSelected value="true"/>
+			</coding>
+			<text value="outcome"/>
+		</variableRole>
+		<observed>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/9"/>
+			<type value="EvidenceVariable"/>
+			<display value="Mortality at 14 days"/>
+		</observed>
+		<intended>
+			<reference value="https://gps.health/coka/resources/EvidenceVariable/9"/>
+			<type value="EvidenceVariable"/>
+			<display value="Mortality at 14 days"/>
+		</intended>
+	</variableDefinition>
+	<synthesisType>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/synthesis-type"/>
+			<version value="4.4.0"/>
+			<code value="std-MA"/>
+			<display value="summary data meta-analysis"/>
+			<userSelected value="true"/>
+		</coding>
+	</synthesisType>
+	<studyType>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/study-type"/>
+			<version value="4.2.0"/>
+			<code value="RCT"/>
+			<display value="randomized trial"/>
+			<userSelected value="true"/>
+		</coding>
+	</studyType>
+	<statistic>
+		<description value="risk ratio 0.85 (95% CI 0.74 to 0.96) in fixed-effect meta-analysis; Test for overall effect Z = 2.52 (p = 0.01); Heterogeneity Chi-squared = 7.33, df = 2 (p 0.03), I-squared = 73%"/>
+		<statisticType>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/statistic-type"/>
+				<version value="4.4.0"/>
+				<code value="C93152"/>
+				<display value="Relative Risk"/>
+				<userSelected value="true"/>
+			</coding>
+		</statisticType>
+		<quantity>
+			<value value="0.85"/>
+		</quantity>
+		<numberOfEvents value="779"/>
+		<sampleSize>
+			<numberOfStudies value="3"/>
+			<numberOfParticipants value="6774"/>
+			<knownDataCount value="6744"/>
+		</sampleSize>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="C53324"/>
+					<display value="Confidence interval"/>
+				</coding>
+			</type>
+			<level value="0.95"/>
+			<range>
+				<low>
+					<value value="0.74"/>
+				</low>
+				<high>
+					<value value="0.96"/>
+				</high>
+			</range>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="C44185"/>
+					<display value="P-value"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="0.01"/>
+			</quantity>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="0000420"/>
+					<display value="I-squared"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="0.73"/>
+			</quantity>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="0000419"/>
+					<display value="Cochran&apos;s Q statistic"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="7.33"/>
+			</quantity>
+			<attributeEstimate>
+				<type>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+						<code value="C44185"/>
+						<display value="P-value"/>
+					</coding>
+				</type>
+				<quantity>
+					<value value="0.03"/>
+				</quantity>
+			</attributeEstimate>
+		</attributeEstimate>
+		<modelCharacteristic>
+			<code>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/statistic-model-code"/>
+					<version value="4.4.0"/>
+					<code value="effectsFixed"/>
+					<display value="Fixed-effects"/>
+					<userSelected value="true"/>
+				</coding>
+			</code>
+		</modelCharacteristic>
+		<modelCharacteristic>
+			<code>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/statistic-model-code"/>
+					<version value="4.4.0"/>
+					<code value="metaAnalysis"/>
+					<display value="Meta-analysis"/>
+					<userSelected value="true"/>
+				</coding>
+			</code>
+		</modelCharacteristic>
+	</statistic>
+	<statistic>
+		<description value="risk ratio 0.81 (95% CI 0.60 to 1.08) in random-effects meta-analysis; Test for overall effect Z = 1.44 (p = 0.15); Heterogeneity Chi-squared = 7.33, df = 2 (p 0.03), I-squared = 73%; Tau-squared = 0.04"/>
+		<note>
+			<text value="We consider the random-effects model more appropriate for interpretation as the true effect of remdesivir is likely different across the different populations represented in each trial."/>
+		</note>
+		<statisticType>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/statistic-type"/>
+				<version value="4.4.0"/>
+				<code value="C93152"/>
+				<display value="Relative Risk"/>
+				<userSelected value="true"/>
+			</coding>
+		</statisticType>
+		<quantity>
+			<value value="0.81"/>
+		</quantity>
+		<numberOfEvents value="779"/>
+		<sampleSize>
+			<numberOfStudies value="3"/>
+			<numberOfParticipants value="6774"/>
+			<knownDataCount value="6744"/>
+		</sampleSize>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="C53324"/>
+					<display value="Confidence interval"/>
+				</coding>
+			</type>
+			<level value="0.95"/>
+			<range>
+				<low>
+					<value value="0.6"/>
+				</low>
+				<high>
+					<value value="1.08"/>
+				</high>
+			</range>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="C44185"/>
+					<display value="P-value"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="0.15"/>
+			</quantity>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="0000421"/>
+					<display value="Tau squared"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="0.04"/>
+			</quantity>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="0000420"/>
+					<display value="I-squared"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="0.73"/>
+			</quantity>
+		</attributeEstimate>
+		<attributeEstimate>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+					<code value="0000419"/>
+					<display value="Cochran&apos;s Q statistic"/>
+				</coding>
+			</type>
+			<quantity>
+				<value value="7.33"/>
+			</quantity>
+			<attributeEstimate>
+				<type>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/attribute-estimate-type"/>
+						<code value="C44185"/>
+						<display value="P-value"/>
+					</coding>
+				</type>
+				<quantity>
+					<value value="0.03"/>
+				</quantity>
+			</attributeEstimate>
+		</attributeEstimate>
+		<modelCharacteristic>
+			<code>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/statistic-model-code"/>
+					<version value="4.4.0"/>
+					<code value="effectsRandom"/>
+					<display value="Random-effects"/>
+					<userSelected value="true"/>
+				</coding>
+			</code>
+		</modelCharacteristic>
+		<modelCharacteristic>
+			<code>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/statistic-model-code"/>
+					<version value="4.4.0"/>
+					<code value="metaAnalysis"/>
+					<display value="Meta-analysis"/>
+					<userSelected value="true"/>
+				</coding>
+			</code>
+		</modelCharacteristic>
+		<modelCharacteristic>
+			<code>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/statistic-model-method"/>
+					<version value="4.4.0"/>
+					<code value="tauDersimonianLaird"/>
+					<display value="Dersimonian-Laird method"/>
+					<userSelected value="true"/>
+				</coding>
+			</code>
+		</modelCharacteristic>
+	</statistic>
+	<certainty>
+		<description value="Low certainty due to inconsistency and risk of bias"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+				<code value="Overall"/>
+				<display value="Overall certainty"/>
+			</coding>
+		</type>
+		<rating>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/certainty-rating"/>
+				<code value="low"/>
+				<display value="Low quality"/>
+			</coding>
+		</rating>
+		<subcomponent>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+					<code value="PublicationBias"/>
+					<display value="Publication bias"/>
+				</coding>
+			</type>
+			<rating>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
+					<code value="no-concern"/>
+					<display value="no serious concern"/>
+				</coding>
+			</rating>
+		</subcomponent>
+		<subcomponent>
+			<note>
+				<text value="There is a high degree of heterogeneity (I-squared = 73%).  There is also inconsistency in findings between the fixed-effect and random-effects statistical models."/>
+			</note>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+					<code value="Inconsistency"/>
+					<display value="Inconsistency"/>
+				</coding>
+			</type>
+			<rating>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
+					<code value="serious-concern"/>
+					<display value="serious concern"/>
+				</coding>
+			</rating>
+		</subcomponent>
+		<subcomponent>
+			<note>
+				<text value="Although the random-effects analysis finds an estimate without statistical significance, this imprecision is explained by the inconsistency (heterogeneity) and thus not further downrated  in certainty assessment."/>
+			</note>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+					<code value="Imprecision"/>
+					<display value="Imprecision"/>
+				</coding>
+			</type>
+			<rating>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
+					<code value="no-concern"/>
+					<display value="no serious concern"/>
+				</coding>
+			</rating>
+		</subcomponent>
+		<subcomponent>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+					<code value="Indirectness"/>
+					<display value="Indirectness"/>
+				</coding>
+			</type>
+			<rating>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
+					<code value="no-concern"/>
+					<display value="no serious concern"/>
+				</coding>
+			</rating>
+		</subcomponent>
+		<subcomponent>
+			<type>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-type"/>
+					<code value="RiskOfBias"/>
+					<display value="Risk of bias"/>
+				</coding>
+			</type>
+			<rating>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"/>
+					<code value="serious-concern"/>
+					<display value="serious concern"/>
+				</coding>
+			</rating>
+		</subcomponent>
+	</certainty>
+</Evidence>

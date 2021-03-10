@@ -124,4 +124,16 @@
       <display value="Stroke Thrombolysis Trialists&#x2019; 2014-2016 IPD-MA Cohort"/>
     </item>
   </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Remdesivir IV 200 mg once then 100 mg once daily for 9 days"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="evidencevariable-example-remdesivir"/>
+    </extension>
+    <item>
+      <reference value="EvidenceVariable/evidencevariable-example-remdesivir"/>
+      <display value="Remdesivir EvidenceVariable Example"/>
+    </item>
+  </entry>
 </List>

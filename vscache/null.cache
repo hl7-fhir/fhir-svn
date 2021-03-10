@@ -13,18 +13,22 @@ e: {
   "resourceType" : "ValueSet",
   "id" : "action-participant-role",
   "meta" : {
-    "lastUpdated" : "2017-02-16T10:33:00.000+11:00",
+    "lastUpdated" : "2017-02-15T16:33:00.000-07:00",
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
   },
   "url" : "http://terminology.hl7.org/ValueSet/action-participant-role",
-  "version" : "0.1.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.3.796"
+  }],
+  "version" : "4.0.1",
   "name" : "ActionParticipantRole",
   "status" : "draft",
   "experimental" : false,
   "date" : "2017-02-15T16:33:00.000-07:00",
   "expansion" : {
-    "identifier" : "urn:uuid:5a1162f8-8b64-4026-ac79-f55bd2b24639",
-    "timestamp" : "2021-03-07T05:46:11.861Z",
+    "identifier" : "urn:uuid:b3d64981-f54e-4d27-87ab-e259fd32e906",
+    "timestamp" : "2021-03-10T20:47:47.379Z",
     "parameter" : [{
       "name" : "expansion-source",
       "valueString" : "ValueSet/action-participant-role"
@@ -112,8 +116,8 @@ e: {
   "experimental" : false,
   "date" : "2014-07-28",
   "expansion" : {
-    "identifier" : "urn:uuid:d60a14c0-5aac-4b4a-917a-9ce6d353522c",
-    "timestamp" : "2021-03-07T05:46:24.673Z",
+    "identifier" : "urn:uuid:0a7213dd-5c25-428f-b5ec-861179d5bc92",
+    "timestamp" : "2021-03-10T20:47:54.707Z",
     "parameter" : [{
       "name" : "expansion-source",
       "valueString" : "ValueSet/security-labels"
@@ -2308,6 +2312,78 @@ e: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/ValueSet/practitioner-role",
+      "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "id" : "action-participant-role",
+  "meta" : {
+    "lastUpdated" : "2021-03-10T13:46:31.880-07:00",
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on: </p><ul><li>http://terminology.hl7.org/CodeSystem/practitioner-role version 4.0.1</li><li>SNOMED CT International edition 31-Jan 2020</li></ul></div><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+  },
+  "url" : "http://terminology.hl7.org/ValueSet/action-participant-role",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.3.796"
+  }],
+  "version" : "4.0.1",
+  "name" : "ActionParticipantRole",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2017-02-15T16:33:00.000-07:00",
+  "description" : "Value Set Contents (Expansion) for ActionParticipantRole at Wed, Mar 10, 2021 15:48-0500",
+  "expansion" : {
+    "identifier" : "urn:uuid:6c18fa61-3ecb-419c-8470-287e1bdc4c05",
+    "timestamp" : "2021-03-10T20:48:55.926Z",
+    "parameter" : [{
+      "name" : "expansion-source",
+      "valueString" : "ValueSet/action-participant-role"
+    },
+    {
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "includeDesignations",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "expansion-source",
+      "valueString" : "ValueSet/practitioner-role"
+    },
+    {
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "includeDesignations",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://terminology.hl7.org/CodeSystem/practitioner-role|4.0.1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200131"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
       "valueSet" : ["http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification"]
     },
     {
@@ -2332,7 +2408,7 @@ e: {
   "resourceType" : "ValueSet",
   "id" : "security-labels",
   "meta" : {
-    "lastUpdated" : "2021-03-07T16:45:04.308+11:00",
+    "lastUpdated" : "2021-03-10T15:46:31.880-05:00",
     "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
   },
   "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -2347,8 +2423,8 @@ e: {
   "experimental" : false,
   "date" : "2014-07-28",
   "expansion" : {
-    "identifier" : "urn:uuid:c014af9c-6a96-435b-bf2a-d4885649e823",
-    "timestamp" : "2021-03-07T05:47:34.876Z",
+    "identifier" : "urn:uuid:bf09214a-df67-4934-945a-426efbe916a0",
+    "timestamp" : "2021-03-10T20:49:34.598Z",
     "parameter" : [{
       "name" : "expansion-source",
       "valueString" : "ValueSet/security-labels"

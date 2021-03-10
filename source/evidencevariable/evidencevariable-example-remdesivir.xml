@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EvidenceVariable xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<id value="evidencevariable-example-remdesivir"/>
+	<url value="https://fevir.net/resources/EvidenceVariable/56"/>
+	<identifier>
+		<system value="https://gps.health/coka"/>
+		<value value="16"/>
+	</identifier>
+	<identifier>
+		<type>
+			<text value="resource identifier"/>
+		</type>
+		<system value="https://fevir.net"/>
+		<value value="56"/>
+		<assigner>
+			<display value="Computable Publishing LLC"/>
+		</assigner>
+	</identifier>
+	<name value="RemdesivirIV200mgOnceThen100mgQDx9d"/>
+	<title value="Remdesivir EvidenceVariable Example"/>
+	<status value="active"/>
+	<date value="2020-12-17"/>
+	<description value="Remdesivir IV 200 mg once then 100 mg once daily for 9 days"/>
+	<publisher value="Computable Publishing LLC"/>
+	<contact>
+		<telecom>
+			<system value="email"/>
+			<value value="support@computablepublishing.com"/>
+		</telecom>
+	</contact>
+	<author>
+		<name value="Brian S. Alper"/>
+	</author>
+	<characteristic>
+		<definitionCodeableConcept>
+			<text value="IV remedesivir 200 mg then 100 mg/day for 9 days"/>
+		</definitionCodeableConcept>
+	</characteristic>
+</EvidenceVariable>
