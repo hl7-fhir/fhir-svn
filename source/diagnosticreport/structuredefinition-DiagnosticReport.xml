@@ -86,6 +86,13 @@
       <alias value="Laboratory"/>
       <min value="0"/>
       <max value="*"/>
+      <constraint>
+        <key value="dgr-1"/>
+        <severity value="error"/>
+        <human value="A resource referenced in a Composition entry must also be included in the DiagnosticReport result (Observation resources or nested resources via Observation.hasMember)"/>
+        <expression value="composition.exists() implies composition.resolve().section.entry.resolve().descendants().where((id in result.resolve().descendants().id).not()).empty()"/>
+        <xpath value="true()"/> <!-- dummy xpath expression included to avoid null pointer error -->
+      </constraint>
       <mapping>
         <identity value="workflow"/>
         <map value="Event"/>
@@ -636,6 +643,22 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
       </type>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".value.reference"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.composition">
+      <path value="DiagnosticReport.composition"/>
+      <short value="Reference to a Composition resource for the DiagnosticReport structure"/>
+      <definition value="Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport."/>
+      <comment value="The Composition provides structure to the content of the DiagnosticReport (and only contains contents referenced in the DiagnosticReport) - e.g., to order the sections of a anatomic pathology structured report."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+      </type>
       <mapping>
         <identity value="rim"/>
         <map value=".value.reference"/>
