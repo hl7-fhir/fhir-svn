@@ -181,8 +181,8 @@ There are 3 different ways to express this mapping, depending on what should hap
 </p>
 <pre>
 src.a21 as a -&gt; tgt.a21 = cast(a, "integer"); // error if it's not an integer
-src.a21 as a where a.isInteger -&gt; tgt.a21 = cast(a, "integer"); // ignore it
-src.a21 as a where not at1.isInteger -&gt; tgt.a21 = 0; // just assign it 0
+src.a21 as a where a.convertsToInteger() -&gt; tgt.a21 = cast(a, "integer"); // ignore it
+src.a21 as a where at1.convertsToInteger().not() -&gt; tgt.a21 = 0; // just assign it 0
 </pre>
 <p>
 More than one of these mapping rules may be present to handle all possible cases - e.g. rule_a21b combined with rule_a21c.
