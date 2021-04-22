@@ -97,10 +97,10 @@ All names defined by the map language - group, rule and variable names - must be
 <a href="datatypes.html#id">ids</a> (1-64 characters, upper and lowercase letters, numbers, dashes and dots). 
 To avoid parsing ambiguities however, they cannot start with a character, cannot be one of the keywords used
 in the language (see section Reserved Keywords below) and cannot contain a dot or dash, 
-unless the names can be escaped. Escaping can be done by surrounding them by backticks or double quotes. For example:
+unless the names can be escaped. Escaping can be done by surrounding them by backticks. For example:
 
 <pre>
-   src  document4  "not-found"  "section4.5"  `group` 
+   src  document4  `not-found`  `section4.5`  `group` 
 </pre>
 </p>
 
