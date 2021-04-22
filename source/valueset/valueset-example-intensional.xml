@@ -45,23 +45,21 @@
   </contact>
   <description value="This is an example value set that includes all the LOINC codes for serum/plasma cholesterol from v2.36."/>
   <copyright value="This content from LOINCÂ® is copyright Â© 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
-<!--   
-	  in extensional value sets, it's often done
-    not to specify a locked date, or a version of the
-		code system - we're saying, whatever are the right
-		codes in the version you are using 
-	  -->
+    <!--   
+        In intensional value sets a locked date or a version of the code 
+        system is often not specified. Instead, we're saying, select the 
+        right codes in the version you are using based on the filter criteria
+    -->
   <compose>
     <include>
       <system value="http://loinc.org"/>
-    <!--  
-        instead of listing the codes (see the intensional example)
-			  we do something else: all codes in LOINC part LP43571-6
-				
-				Doing it like this means we can't change the displays (per the 
-				intensional example). 
-				
-				  -->
+            <!--  
+                Instead of listing the codes (see the extensional example)
+                we do something else: all codes in LOINC part LP43571-6
+
+                Doing it like this means we can't change the displays (per the 
+                extensional example). 
+            -->
       <filter>
         <property value="parent"/>
         <op value="="/>
