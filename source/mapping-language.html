@@ -405,17 +405,20 @@ Dependent rules specify what additional rules are evaluated when the rule is com
 </pre>
 <p>
 When a rule contains other rules, the variables from the containing rules are all available to the contained rules.
-Alternatively, a rule can nominate another group of rules from the same or an imported mapping. Each rule or group is listed by name, and then a set of parameters are provided.
+Alternatively, a rule can nominate other groups of rules from the same or an imported mapping. Each group is listed by name, and then a set of parameters are provided.
 </p>
 
 <pre>
- .. then rule(param, param)
+ .. then group(param, param)
 </pre>
 
 <p>
-The parameters provided must match the parameters required by the dependent rule, in order. In addition, the mode
+The parameters provided must match the parameters required by the dependent group, in order. In addition, the mode
 of the variable must match - inputs that are targets must be target variables. Note, though, that target variables
 can be treated as source for a group.
+</p>
+<p>
+Multiple groups may be specified, each separated by a comma. The last group invocation of the rule may be followed by a set of dependent rules. Dependent rules are evaluated after all nominated groups have been invoked.
 </p>
 <p>
 Groups are resolved by name by looking through all the groups in all the available maps

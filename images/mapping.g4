@@ -118,7 +118,7 @@ log
     ;
 
 dependent
-    : 'then' (invocation | rules)
+    : 'then' (invocation (',' invocation)* rules? | rules)
     ;
 
 ruleTarget
