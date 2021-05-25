@@ -98,7 +98,7 @@ ruleContext
 	;
 
 sourceDefault
-    : 'default' fhirPath
+    : 'default' '(' fhirPath ')'
     ;
 
 alias
@@ -106,15 +106,15 @@ alias
 	;
 
 whereClause
-    : 'where' fhirPath
+    : 'where' '(' fhirPath ')'
     ;
 
 checkClause
-    : 'check' fhirPath
+    : 'check' '(' fhirPath ')'
     ;
 
 log
-    : 'log' fhirPath
+    : 'log' '(' fhirPath ')'
     ;
 
 dependent

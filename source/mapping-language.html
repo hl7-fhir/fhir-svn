@@ -246,11 +246,11 @@ how source content is transformed into target content. The full format for a rul
 looks like this:
 </p>
 <pre>
-src_context.field as new_variable where condition -&gt; tgt_context.field = create([type]) as new_variable then [details] "name";
+src_context.field as new_variable where (condition) -&gt; tgt_context.field = create([type]) as new_variable then [details] "name";
 </pre>
 For example:
 <pre>
-    src.value : code as vs0 -> tgt.value = create("code") as vt0 then code(vs0, vt0) "valueCode";
+src.value : code as vs0 -> tgt.value = create("code") as vt0 then code(vs0, vt0) "valueCode";
 </pre>
 <p>
 Each rule has three main parts:
@@ -278,15 +278,15 @@ The source content is formed by one or more source statements, which can be assi
 Each [source] contains the following items:
 </p>
 <pre>
-context.element { : type {min..max}} {default [value]} { list-option } as variable where [FHIRPath] check [FHIRPath]
+context.element { : type {min..max}} {default ([value])} { list-option } as variable where ([FHIRPath]) check ([FHIRPath])
 </pre>
 <p>
     For example:
 </p>
 <pre>
-  src.value : integer 0..* default 10 first as vs0
-    where value &gt;= 10 check value &lt;= 100
-    log value
+  src.value : integer 0..* default (10) first as vs0
+    where (value &gt;= 10) check (value &lt;= 100)
+    log (value)
 </pre>
 <ul>
  <li><b>context.element</b>: The fist part of the source statement consists of two parts: the <b>context</b> and the <b>element</b>. <p>The context is an identifier which is either declared as a source for the map or as a source parameter or any named variable within the group in which this rule is nested.</p>
@@ -296,8 +296,8 @@ context.element { : type {min..max}} {default [value]} { list-option } as variab
  <li><b>default</b>: A default value, used if there is no source value found. If there's a default value on an item that can repeat, it will only be used once. Default values only apply to primitive types, and the value is a FHIRPath statement (usually a literal)</li>
  <li><b>list-option</b>: by default, the rule will apply once for each occurrence of the element in the source. The list option can override this to specify different behaviour. Valid values are 'first', 'last', 'not_first', 'not_last' and 'only_one'</li>
  <li><b>as variable</b>: if an element is specified, a variable must be assigned. This variable name may be used in the target statement, and may be re-used in other dependent rules (see below). There is one special case described below (simple form) where the variable name is provided explicitly</li>
- <li><b>where [condition]</b>: a FHIRPath expression that is evaluated to boolean on the context. If the expression returns false, the source element has no match</li>
- <li><b>check [condition]</b>: a FHIRPath expression that is evaluated to boolean on the context. If the expression returns false, the mapping engine raises an error. Note: it is usual to have either a where or a check clause, but possible to have both. If both are provided, the where clause is evaluated first, and the check only applies if the where expression is true</li>
+ <li><b>where ([condition])</b>: a FHIRPath expression that is evaluated to boolean on the context. If the expression returns false, the source element has no match</li>
+ <li><b>check ([condition])</b>: a FHIRPath expression that is evaluated to boolean on the context. If the expression returns false, the mapping engine raises an error. Note: it is usual to have either a where or a check clause, but possible to have both. If both are provided, the where clause is evaluated first, and the check only applies if the where expression is true</li>
 </ul>
 <p>
 If there are multiple source statements, the rule applies for the permutation of the source
@@ -306,24 +306,27 @@ elements from each source statement. E.g. if there are 2 source statements, each
 <p>
 Once the source content is evaluated, the engine performing the evaluation has a list of elements assigned to variables. For each time the rule is applied, each of the variables contains a single value. These variables are now mapped into the target structures in the target transformation.
 </p>
+<p>
+To avoid potential parsing ambiguities, all embedded FHIRPath expressions within the mapping language (where conditions, check conditions, log statements, default values) MUST be surrounded by a set of parentheses: "([FHIRPath])".
+</p>
 <h5>Log Statement</h5>
 <p>
 Each source can include a log statement:
 </p>
 <pre>
- log [expression]
+ log ([expression])
 </pre>
 <p>
 Where expression is a FHIRPath statement. e.g. 
 </p>
 <pre>
- log 'not handled yet'
+ log ('not handled yet')
 </pre>
 <p>
 Puts a plain string in the log file. Alternatively, the log statement can contain FHIRPath:
 </p>
 <pre>
- log src.field
+ log (src.field)
 </pre>
 <p>
 Log statements are often used to note that some particular source element is not yet mapped.
