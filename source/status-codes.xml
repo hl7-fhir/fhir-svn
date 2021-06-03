@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office">
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Grahame</Author>
   <LastAuthor>Jose Costa Teixeira</LastAuthor>
@@ -13,10 +20,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  
-  
-  
-  
+  <WindowHeight>11360</WindowHeight>
+  <WindowWidth>25600</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -32,7 +39,7 @@
   <Style ss:ID="s62" ss:Name="Normal 2">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
-   <Font ss:Color="#000000" ss:FontName="Calibri" ss:Size="11" x:Family="Swiss"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
    <Interior/>
    <NumberFormat/>
    <Protection/>
@@ -67,7 +74,7 @@
     <Border ss:LineStyle="Continuous" ss:Position="Right"/>
     <Border ss:LineStyle="Continuous" ss:Position="Top"/>
    </Borders>
-   <Font ss:Color="#FF0000" ss:FontName="Calibri" x:Family="Swiss"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#FF0000"/>
    <Interior/>
   </Style>
   <Style ss:ID="s68">
@@ -150,7 +157,8 @@
    <Interior/>
   </Style>
   <Style ss:ID="s75">
-   <Alignment ss:Horizontal="Left" ss:ShrinkToFit="1" ss:Vertical="Top" ss:WrapText="1"/>
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:ShrinkToFit="1"
+    ss:WrapText="1"/>
    <Borders>
     <Border ss:LineStyle="Continuous" ss:Position="Bottom"/>
     <Border ss:LineStyle="Continuous" ss:Position="Left"/>
@@ -167,7 +175,7 @@
     <Border ss:LineStyle="Continuous" ss:Position="Right"/>
     <Border ss:LineStyle="Continuous" ss:Position="Top"/>
    </Borders>
-   <Font ss:Color="#333333" ss:FontName="Calibri" x:Family="Swiss"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#333333"/>
   </Style>
   <Style ss:ID="s77" ss:Parent="s62">
    <Alignment ss:Vertical="Top"/>
@@ -190,7 +198,7 @@
     <Border ss:LineStyle="Continuous" ss:Position="Right"/>
     <Border ss:LineStyle="Continuous" ss:Position="Top"/>
    </Borders>
-   <Font ss:Color="#FF0000" ss:FontName="Calibri" x:Family="Swiss"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#FF0000"/>
    <Interior/>
   </Style>
   <Style ss:ID="s79" ss:Parent="s62">
@@ -310,65 +318,28 @@
    <Protection/>
   </Style>
   <Style ss:ID="s90">
-   <Alignment ss:Horizontal="Left" ss:ShrinkToFit="1" ss:Vertical="Top" ss:WrapText="1"/>
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:ShrinkToFit="1" ss:WrapText="1"/>
    <Borders>
-    <Border ss:LineStyle="Continuous" ss:Position="Left" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
    </Borders>
-   <Font ss:Color="#000000" ss:FontName="Calibri" ss:Size="11" x:Family="Swiss"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
    <Interior/>
-  </Style>
-  <Style ss:ID="s91" ss:Parent="s62">
-   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
-   <Borders>
-    <Border ss:LineStyle="Continuous" ss:Position="Bottom"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Left"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Right"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Top"/>
-   </Borders>
-   <Font ss:Color="#000000" ss:FontName="Calibri" x:Family="Swiss"/>
-  </Style>
-  <Style ss:ID="s92" ss:Parent="s62">
-   <Alignment ss:Vertical="Top"/>
-   <Borders>
-    <Border ss:LineStyle="Continuous" ss:Position="Bottom"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Left"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Right"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Top"/>
-   </Borders>
-   <Font ss:Color="#000000" ss:FontName="Calibri" x:Family="Swiss"/>
-  </Style>
-  <Style ss:ID="s93" ss:Parent="s62">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
-   <Borders>
-    <Border ss:LineStyle="Continuous" ss:Position="Bottom"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Left"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Right"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Top"/>
-   </Borders>
-   <Font ss:Color="#000000" ss:FontName="Calibri" x:Family="Swiss"/>
-  </Style>
-  <Style ss:ID="s94" ss:Parent="s62">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
-   <Borders>
-    <Border ss:LineStyle="Continuous" ss:Position="Bottom"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Left"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Right"/>
-    <Border ss:LineStyle="Continuous" ss:Position="Top"/>
-   </Borders>
-   <Font ss:Color="#000000" ss:FontName="Calibri" x:Family="Swiss"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="Status Codes">
   <Names>
-   <NamedRange ss:Hidden="1" ss:Name="_FilterDatabase" ss:RefersTo="='Status Codes'!R3C1:R115C30"/>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="='Status Codes'!R3C1:R115C30"
+    ss:Hidden="1"/>
   </Names>
-  <Table ss:ExpandedColumnCount="41" ss:ExpandedRowCount="129" ss:StyleID="s63" x:FullColumns="1" x:FullRows="1">
-   <Column ss:AutoFitWidth="0" ss:StyleID="s63" ss:Width="237.0"/>
-   <Column ss:AutoFitWidth="0" ss:StyleID="s63" ss:Width="70.0"/>
-   <Column ss:AutoFitWidth="0" ss:StyleID="s63" ss:Width="74.0"/>
-   <Column ss:AutoFitWidth="0" ss:Index="10" ss:StyleID="s63" ss:Width="58.0"/>
-   <Column ss:AutoFitWidth="0" ss:StyleID="s63" ss:Width="92.0"/>
-   <Column ss:Index="36" ss:StyleID="s63" ss:Width="45.0"/>
+  <Table ss:ExpandedColumnCount="41" ss:ExpandedRowCount="130" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s63" ss:DefaultColumnWidth="50.666666666666671"
+   ss:DefaultRowHeight="13">
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="237"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="70"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="74"/>
+   <Column ss:Index="10" ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="58"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="92"/>
+   <Column ss:Index="36" ss:StyleID="s63" ss:Width="45"/>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Path</Data></Cell>
     <Cell><Data ss:Type="String">c0</Data></Cell>
@@ -4024,26 +3995,36 @@
     <Cell><Data ss:Type="String">requested</Data></Cell>
     <Cell ss:Index="12" ss:StyleID="s70"><Data ss:Type="String">active</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">DeviceDispense.status</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s91"><Data ss:Type="String">entered-in-error</Data></Cell>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s92"><Data ss:Type="String">preparation</Data></Cell>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s94"><Data ss:Type="String">in-progress</Data></Cell>
-    <Cell ss:StyleID="s94"><Data ss:Type="String">on-hold</Data></Cell>
-    <Cell ss:StyleID="s94"><Data ss:Type="String">stopped</Data></Cell>
-    <Cell ss:StyleID="s93"/>
-    <Cell ss:StyleID="s94"><Data ss:Type="String">completed</Data></Cell>
-    <Cell ss:StyleID="s93"/>
+    <Cell ss:Index="3" ss:StyleID="s69"><Data ss:Type="String">entered-in-error</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">preparation</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">in-progress</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">on-hold</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">stopped</Data></Cell>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">completed</Data></Cell>
+    <Cell ss:StyleID="s74"/>
     <Cell ss:StyleID="s71"/>
     <Cell ss:StyleID="s71"><Data ss:Type="String">unknown</Data></Cell>
     <Cell ss:Index="34"><Data ss:Type="String">cancelled, declined</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">MedicationDefinition.status</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">entered-in-error</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">draft</Data></Cell>
+    <Cell ss:Index="12" ss:StyleID="s70"><Data ss:Type="String">active</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">inactive</Data></Cell>
+    <Cell><Data ss:Type="String">inactive</Data></Cell>
+    <Cell ss:Index="17"><Data ss:Type="String">inactive</Data></Cell>
+    <Cell><Data ss:Type="String">inactive</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -4052,6 +4033,7 @@
     <Footer x:Margin="0.3"/>
     <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
    </PageSetup>
+   <Unsynced/>
    <Print>
     <ValidPrinterInfo/>
     <HorizontalResolution>-4</HorizontalResolution>
@@ -4061,16 +4043,33 @@
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>4</SplitHorizontal>
-   <TopRowBottomPane>103</TopRowBottomPane>
+   <TopRowBottomPane>81</TopRowBottomPane>
    <SplitVertical>1</SplitVertical>
-   <LeftColumnRightPane>23</LeftColumnRightPane>
+   <LeftColumnRightPane>1</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
-   
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>91</ActiveRow>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>129</ActiveRow>
+     <ActiveCol>14</ActiveCol>
+    </Pane>
+   </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
-  <AutoFilter xmlns="urn:schemas-microsoft-com:office:excel" x:Range="R3C1:R115C30">
+  <AutoFilter x:Range="R3C1:R115C30"
+   xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
  </Worksheet>
-<!--canonicalized--></Workbook>
+</Workbook>

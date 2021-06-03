@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="medicationdefinition-status"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="phx"/>
+  </extension>
+  <url value="http://terminology.hl7.org/CodeSystem/medicationdefinition-status"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.1.0"/>
+  </identifier>
+  <version value="4.5.0"/>
+  <name value="MedicationDefinition Status Codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/medicationdefinition-status"/>
+  <content value="complete"/>
+  <concept>
+    <code value="inactive"/>
+    <display value="Inactive"/>
+    <definition value="Inactive Status"/>
+  </concept>
+  <concept>
+    <code value="entered-in-error"/>
+    <display value="Unknown"/>
+    <definition value="The resource has been entered in error and is not to be used"/>
+  </concept>
+  <concept>
+    <code value="active"/>
+    <display value="Unknown"/>
+    <definition value="The resource is defined and ready to use"/>
+  </concept>
+  <concept>
+    <code value="draft"/>
+    <display value="Draft"/>
+    <definition value="The resource is a draft and is not yet completely defined"/>
+  </concept>
+</CodeSystem>

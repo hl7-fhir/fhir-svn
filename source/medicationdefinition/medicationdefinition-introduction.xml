@@ -1,0 +1,35 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<div>
+<a name="bnc"></a>
+<h2>Scope and Usage</h2>
+<p>
+The MedicationDefinition resource contains the attributes that are used to define a medicinal product, whether in the research and regulatory cycles or in its application in clinical settings and monitoring.
+<br/>
+The resource is a comprehensive definitional resource, so that it can support any concept of medication (including the 3 IDMP concepts, or the SNOMED Medicinal Product model, or any national concept of Medicinal product), regardless of its abstraction level. 
+This resource is  therefore meant to be profiled whenever such concepts need to be defined formally (e.g. in regulatory space) but can also be used freely, for example in pharmacovigilance scenario where a medicinal product needs to be defined by several attributes, regardless of whether there is a formal code for the combination of such attributes.
+
+Typical utilization of this resource would be a set of profiles for regulatory use (IDMP or others), then some more profiles for national regulations and billing schemes (e.g. AU notable medication concepts), or (possibly unprofiled) referred to in a cross-border prescription where the codes are not sufficient to describe the product, and the product characteristics have to be sent over the wire.
+<!-- Describes some of the situations/use cases intended to be managed with the resource. May include a child div for "Storyboards" and "Related Specifications". The purpose of this section is to help implementers understand why the resource is needed and how it might be used. -->
+</p>
+</div>
+
+<!-- (recommended): 
+<div>
+<h2>Boundaries and Relationships</h2>
+<p>
+Explains how this resource relates to others. Particularly important is to differentiate between appropriate usages for related resources when an implementer might be confused about what to reference when.
+</p>
+</div>
+-->
+
+<!-- (optional):
+<div>
+<h2>Background and Context</h2>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div>
+-->
+
+</div>

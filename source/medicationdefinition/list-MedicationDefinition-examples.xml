@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List xmlns="http://hl7.org/fhir">
+  <id value="MedicationDefinition-examples"/>
+  <status value="current"/>
+  <mode value="working"/>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of MedicationDefinition"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="medicationdefinition-example"/>
+    </extension>
+    <item>
+      <reference value="MedicationDefinition/example"/>
+      <display value="General"/>
+    </item>
+  </entry>
+</List>

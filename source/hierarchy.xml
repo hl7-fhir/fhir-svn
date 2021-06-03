@@ -439,6 +439,7 @@ signatures.html
 
     <page title="Medication Definition" filename="medication-definition-module.html" icon="medication.png">
       <page type="resource" resource="MedicinalProductDefinition"/>
+      <page type="resource" resource="MedicationDefinition"/>
       <page type="resource" resource="PackagedProductDefinition"/>
       <page type="resource" resource="RegulatedAdministrableProduct"/>
       <page type="resource" resource="ManufacturedItemDefinition"/>

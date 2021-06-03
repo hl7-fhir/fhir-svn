@@ -309,6 +309,9 @@
     <Cell><Data ss:Type="String">DeviceDefinition</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">MedicationDefinition</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">DeviceMetric</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -778,6 +781,9 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">InventoryReport</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MedicationDefinition</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">DeviceDispense</Data></Cell>
