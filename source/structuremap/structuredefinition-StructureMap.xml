@@ -1129,15 +1129,13 @@
       </type>
       <isSummary value="true"/>
     </element>
-    <element id="StructureMap.group.rule.dependent.variable">
-      <path value="StructureMap.group.rule.dependent.variable"/>
-      <short value="Variable to pass to the rule or group"/>
-      <definition value="Variable to pass to the rule or group."/>
+    <element id="StructureMap.group.rule.dependent.parameter">
+      <path value="StructureMap.group.rule.dependent.parameter"/>
+      <short value="Parameter to pass to the rule or group"/>
+      <definition value="Parameter to pass to the rule or group."/>
       <min value="1"/>
       <max value="*"/>
-      <type>
-        <code value="string"/>
-      </type>
+      <contentReference value="#StructureMap.group.rule.target.parameter"/>
       <isSummary value="true"/>
     </element>
     <element id="StructureMap.group.rule.documentation">
