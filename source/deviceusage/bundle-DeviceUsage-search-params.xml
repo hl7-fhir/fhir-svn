@@ -50,34 +50,14 @@
           <valueCode value="trial-use"/>
         </extension>
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="DeviceUsage.subject"/>
+          <valueString value="DeviceUsage.patient"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-patient"/>
-        <description value="Search by subject - a patient"/>
+        <description value="Search by patient who used / uses the device"/>
         <code value="patient"/>
         <type value="reference"/>
-        <expression value="DeviceUsage.subject"/>
-        <xpath value="f:DeviceUsage/f:subject"/>
-        <xpathUsage value="normal"/>
-      </SearchParameter>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <SearchParameter>
-        <id value="DeviceUsage-subject"/>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-          <valueCode value="trial-use"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="DeviceUsage.subject"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-subject"/>
-        <description value="Search by subject"/>
-        <code value="subject"/>
-        <type value="reference"/>
-        <expression value="DeviceUsage.subject"/>
-        <xpath value="f:DeviceUsage/f:subject"/>
+        <expression value="DeviceUsage.patient"/>
+        <xpath value="f:DeviceUsage/f:patient"/>
         <xpathUsage value="normal"/>
       </SearchParameter>
     </resource>

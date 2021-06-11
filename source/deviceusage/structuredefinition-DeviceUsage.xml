@@ -147,7 +147,7 @@
     </element>
     <element id="DeviceUsage.status">
       <path value="DeviceUsage.status"/>
-      <short value="active | completed | entered-in-error +"/>
+      <short value="active | completed | not-done | entered-in-error +"/>
       <definition value="A code representing the patient or other source&#39;s judgment about the state of the device used that this statement is about.  Generally this will be active or completed."/>
       <comment value="DeviceUseStatment is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for contains codes that assert the status of the use  by the patient (for example, stopped or on hold) as well as codes that assert the status of the resource itself (for example, entered in error).&#xD;&#xD;This element is labeled as a modifier because the status contains the codes that mark the statement as not currently valid."/>
       <min value="1"/>
@@ -193,8 +193,8 @@
         <code value="CodeableConcept"/>
       </type>
     </element>
-    <element id="DeviceUsage.subject">
-      <path value="DeviceUsage.subject"/>
+    <element id="DeviceUsage.patient">
+      <path value="DeviceUsage.patient"/>
       <short value="Patient using device"/>
       <definition value="The patient who used the device."/>
       <min value="1"/>

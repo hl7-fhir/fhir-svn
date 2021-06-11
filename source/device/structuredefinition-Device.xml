@@ -616,44 +616,6 @@
         <valueSet value="http://hl7.org/fhir/ValueSet/device-type"/>
       </binding>
     </element>
-    <element id="Device.specialization">
-      <extension url="http://hl7.org/fhir/build/StructureDefinition/svg">
-        <valueCode value="600,150"/>
-      </extension>
-      <path value="Device.specialization"/>
-      <short value="The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication"/>
-      <definition value="The device function, including in some cases whether or not the functionality conforms to some standard. For example, a PHD blood pressure specialization indicates that the device conforms to the IEEE 11073-10407 Blood Pressure Specialization. This is NOT an alternate name or an additional descriptive name given by the manufacturer. That would be found in the deviceName element.&#xA;In the PHD case, there are 11073 10101 nomenclature codes that define the specialization standards and that will be used, for example, in the PHD case for the specialization.systemType element. The specialization.version would be the version of the standard if the systemType referred to a standard."/>
-      <min value="0"/>
-      <max value="*"/>
-      <type>
-        <code value="BackboneElement"/>
-      </type>
-    </element>
-    <element id="Device.specialization.systemType">
-      <path value="Device.specialization.systemType"/>
-      <short value="The standard that is used to operate and communicate"/>
-      <definition value="The standard that is used to operate and communicate."/>
-      <alias value="&#x3A3;"/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-    </element>
-    <element id="Device.specialization.version">
-      <path value="Device.specialization.version"/>
-      <short value="The version of the standard that is used to operate and communicate"/>
-      <definition value="The version of the standard that is used to operate and communicate."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="string"/>
-      </type>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.what[x]"/>
-      </mapping>
-    </element>
     <element id="Device.version">
       <extension url="http://hl7.org/fhir/build/StructureDefinition/svg">
         <valueCode value="800,100"/>
@@ -728,8 +690,9 @@
     </element>
     <element id="Device.property.value[x]">
       <path value="Device.property.value[x]"/>
-      <short value="Property value - as a code or quantity"/>
-      <definition value="Property value - can be a code or quantity."/>
+      <short value="Property value - as a code, quantity, boolean, string or attachmment"/>
+      <definition value="Property value - can be a code, quantity, boolean, string or attachment."/>
+      <comment value="The string is used for properties that are intrinsically text, such as warning text, or assemlby instructions. CodeableConcept.text also supports unencoded text but should be used where the characteristic is a concept that might be coded but there is no assigned code for the present value. For example, a security class can be a code like 'Class 1' but in some cases may contain a string like 'Depending on the settings' - in this case the property is normally coded but this is an exception"/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -737,6 +700,15 @@
       </type>
       <type>
         <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="Attachment"/>
       </type>
     </element>
     <element id="Device.patient">
@@ -919,6 +891,48 @@
         <map value=".telecom"/>
       </mapping>
     </element>
+
+
+    <element id="Device.link">
+      <path value="Device.link"/>
+      <short value="An associated device, attached to, used with, communicating with or linking a previous or new device model to the focal device"/>
+      <definition value="An associated device, attached to, used with, communicating with or linking a previous or new device model to the focal device."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Device.link.relation">
+      <path value="Device.link.relation"/>
+      <short value="The type indicates the relationship of the related device to the device instance"/>
+      <definition value="The type indicates the relationship of the related device to the device instance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DeviceRelationType"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="The type of relation between this and the linked device."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/device-relationtype"/>
+      </binding>
+    </element>
+    <element id="Device.link.relatedDevice">
+      <path value="Device.link.relatedDevice"/>
+      <short value="A reference to the linked device"/>
+      <definition value="A reference to the linked device."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableReference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+      </type>
+    </element>
+
     <element id="Device.note">
       <path value="Device.note"/>
       <short value="Device notes and comments"/>

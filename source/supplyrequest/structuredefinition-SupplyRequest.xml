@@ -161,6 +161,22 @@
         <map value=".status"/>
       </mapping>
     </element>
+    <element id="SupplyRequest.basedOn">
+      <path value="SupplyRequest.basedOn"/>
+      <short value="What other request is fulfilled by this supply request"/>
+      <definition value="Plan/proposal/order fulfilled by this request."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Request.basedOn"/>
+      </mapping>
+    </element>
     <element id="SupplyRequest.category">
       <extension url="http://hl7.org/fhir/build/StructureDefinition/committee-notes">
         <valueString value="[3417]."/>

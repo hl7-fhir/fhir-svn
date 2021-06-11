@@ -9,119 +9,63 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      
       <p>This code system http://hl7.org/fhir/device-usage-status defines the following codes:</p>
-      
       <table class="codes">
-        
         <tr>
-          
           <td style="white-space:nowrap">
-            
             <b>Code</b>
-          
           </td>
-          
           <td>
-            
             <b>Display</b>
-          
           </td>
-          
           <td>
-            
             <b>Definition</b>
-          
           </td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">active
-            
             <a name="device-usage-status-active"> </a>
-          
           </td>
-          
           <td>Active</td>
-          
           <td>The device is still being used.</td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">completed
-            
             <a name="device-usage-status-completed"> </a>
-          
           </td>
-          
           <td>Completed</td>
-          
           <td>The device is no longer being used.</td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">entered-in-error
-            
             <a name="device-usage-status-entered-in-error"> </a>
-          
           </td>
-          
           <td>Entered in Error</td>
-          
           <td>The statement was recorded incorrectly.</td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">intended
-            
             <a name="device-usage-status-intended"> </a>
-          
           </td>
-          
           <td>Intended</td>
-          
           <td>The device may be used at some time in the future.</td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">stopped
-            
             <a name="device-usage-status-stopped"> </a>
-          
           </td>
-          
           <td>Stopped</td>
-          
           <td>Actions implied by the statement have been permanently halted, before all of them occurred.</td>
-        
         </tr>
-        
         <tr>
-          
           <td style="white-space:nowrap">on-hold
-            
             <a name="device-usage-status-on-hold"> </a>
-          
           </td>
-          
           <td>On Hold</td>
-          
           <td>Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;.</td>
-        
         </tr>
       
       </table>
-    
     </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
@@ -168,6 +112,11 @@
     <code value="completed"/>
     <display value="Completed"/>
     <definition value="The device is no longer being used."/>
+  </concept>
+  <concept>
+    <code value="not-done"/>
+    <display value="Not done"/>
+    <definition value="The device was not used."/>
   </concept>
   <concept>
     <code value="entered-in-error"/>

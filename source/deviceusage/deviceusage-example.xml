@@ -6,9 +6,9 @@
 		<value value="51ebb7a9-4e3a-4360-9a05-0cc2d869086f"/>
 	</identifier>
 	<status value="active"/>
-	<subject>
+	<patient>
 		<reference value="Patient/example"/>
-	</subject>
+	</patient>
 	<device>
 		<reference>
 			<reference value="Device/example"/>
