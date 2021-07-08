@@ -414,11 +414,11 @@
         <map value="no-gen-base"/>
       </mapping>
     </element>
-    <element id="ConceptMap.source[x]">
-      <path value="ConceptMap.source[x]"/>
-      <short value="The source value set that contains the concepts that are being mapped"/>
-      <definition value="Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings."/>
-      <comment value="Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system."/>
+    <element id="ConceptMap.sourceScope[x]">
+      <path value="ConceptMap.sourceScope[x]"/>
+      <short value="The source scope value set that contains the concepts that are being mapped"/>
+      <definition value="Identifier for the source scope value set that contains the concepts that are being mapped and provides context for the mappings."/>
+      <comment value="Should be a version specific reference. URIs SHOULD be absolute. If there is no source scope or target scope value set, there is no specified context for the map (not recommended).  The source value set may select codes from either an explicit (standard or local) or implicit code system."/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -430,11 +430,11 @@
       </type>
       <isSummary value="true"/>
     </element>
-    <element id="ConceptMap.target[x]">
-      <path value="ConceptMap.target[x]"/>
-      <short value="The target value set which provides context for the mappings"/>
-      <definition value="The target value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made."/>
-      <comment value="Should be a version specific reference. URIs SHOULD be absolute. If there is no source or target value set, the is no specified context for the map."/>
+    <element id="ConceptMap.targetScope[x]">
+      <path value="ConceptMap.targetScope[x]"/>
+      <short value="The target scope value set which provides context for the mappings"/>
+      <definition value="The target scope value set provides context for the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made."/>
+      <comment value="Should be a version specific reference. URIs SHOULD be absolute. If there is no source scope or target scope value set, the is no specified context for the map."/>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -658,37 +658,35 @@
         <code value="uri"/>
       </type>
     </element>
-    <element id="ConceptMap.group.element.target.dependsOn.system">
-      <path value="ConceptMap.group.element.target.dependsOn.system"/>
-      <short value="Code System (if necessary)"/>
-      <definition value="An absolute URI that identifies the code system of the dependency code (if the source/dependency is a value set that crosses code systems)."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="canonical"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CodeSystem"/>
-      </type>
-      <meaningWhenMissing value="The code is in the source (dependsOn) or target (product) system"/>
-    </element>
-    <element id="ConceptMap.group.element.target.dependsOn.value">
-      <path value="ConceptMap.group.element.target.dependsOn.value"/>
+    <element id="ConceptMap.group.element.target.dependsOn.value[x]">
+      <path value="ConceptMap.group.element.target.dependsOn.value[x]"/>
       <short value="Value of the referenced element"/>
       <definition value="Identity (code or path) or the element/item/ValueSet/text that the map depends on / refers to."/>
       <min value="1"/>
       <max value="1"/>
       <type>
+        <code value="code"/>
+      </type>
+	  <type>
+        <code value="Coding"/>
+      </type>
+	  <type>
         <code value="string"/>
       </type>
-    </element>
-    <element id="ConceptMap.group.element.target.dependsOn.display">
-      <path value="ConceptMap.group.element.target.dependsOn.display"/>
-      <short value="Display for the code (if value is a code)"/>
-      <definition value="The display for the code. The display is only provided to help editors when editing the concept map."/>
-      <comment value="The display is ignored when processing the map."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="string"/>
+	  <type>
+        <code value="integer"/>
+      </type>
+	  <type>
+        <code value="boolean"/>
+      </type>
+	  <type>
+        <code value="dateTime"/>
+      </type>
+	  <type>
+        <code value="decimal"/>
+      </type>
+	  <type>
+        <code value="uri"/>
       </type>
     </element>
     <element id="ConceptMap.group.element.target.product">
@@ -726,6 +724,14 @@
         <human value="If the mode is &#39;fixed&#39;, a code must be provided"/>
         <expression value="(mode = &#39;fixed&#39;) implies code.exists()"/>
         <xpath value="(f:mode/@value != &#39;fixed&#39;) or exists(f:code)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ConceptMap"/>
+      </constraint>
+	  <constraint>
+        <key value="cmd-5"/>
+        <severity value="error"/>
+        <human value="If the mode is &#39;other-map&#39;, a relationship must be provided"/>
+        <expression value="(mode = &#39;other-map&#39;) implies relationship.exists()"/>
+        <xpath value="(f:mode/@value != &#39;other-map&#39;) or exists(f:relationship)"/>
         <source value="http://hl7.org/fhir/StructureDefinition/ConceptMap"/>
       </constraint>
     </element>
@@ -781,6 +787,30 @@
         <code value="canonical"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ConceptMap"/>
       </type>
+    </element>
+	<element id="ConceptMap.group.unmapped.relationship">
+      <path value="ConceptMap.group.unmapped.relationship"/>
+      <short value="related-to | equivalent | source-is-narrower-than-target | source-is-broader-than-target | not-related-to"/>
+      <definition value="The equivalence relationship to the additional ConceptMap when mode = other-map."/>
+      <comment value="This element is labeled as a modifier because it may indicate that there is no mapping."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isModifierReason value="The &#39;not-related-to&#39; relationship means that there is no mapping from the source to the target, and the mapping cannot be interpreted without knowing this value as it could mean the elements are equivalent, totally mismatched or anything in between"/>
+	  <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ConceptMapRelationship"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The relationship between concepts."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/concept-map-relationship|4.5.0"/>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

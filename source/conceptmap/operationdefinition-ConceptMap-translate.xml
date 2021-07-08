@@ -143,7 +143,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="identifies a target code system in which a mapping is sought. This parameter is an alternative to the target parameter - only one is required. Searching for any translation to a target code system irrespective of the context (e.g. target valueset) may lead to unsafe results, and it is at the discretion of the server to decide when to support this operation"/>
+    <documentation value="identifies a target code system in which a mapping is sought. This parameter is an alternative to the targetScope parameter - only one is required. Searching for any translation to a target code system irrespective of the context (e.g. target valueset) may lead to unsafe results, and it is at the discretion of the server to decide when to support this operation"/>
     <type value="uri"/>
   </parameter>
   <parameter>
@@ -236,16 +236,16 @@
         <max value="1"/>
         <documentation value="The value for this product"/>
         <type value="code"/>
-		<type value="Coding"/>
-		<type value="string"/>
-		<type value="integer"/>
-		<type value="boolean"/>
-		<type value="dateTime"/>
-		<type value="decimal"/>
-		<type value="uri"/>
+        <type value="Coding"/>
+        <type value="string"/>
+        <type value="integer"/>
+        <type value="boolean"/>
+        <type value="dateTime"/>
+        <type value="decimal"/>
+        <type value="uri"/>
       </part>
     </part>
-	<part>
+    <part>
       <name value="dependsOn"/>
       <use value="out"/>
       <min value="0"/>
@@ -256,7 +256,7 @@
         <use value="out"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The element for this product"/>
+        <documentation value="The element for this dependency"/>
         <type value="uri"/>
       </part>
       <part>
@@ -264,23 +264,23 @@
         <use value="out"/>
         <min value="1"/>
         <max value="1"/>
-        <documentation value="The value for this product"/>
+        <documentation value="The value for this dependency"/>
         <type value="code"/>
-		<type value="Coding"/>
-		<type value="string"/>
-		<type value="integer"/>
-		<type value="boolean"/>
-		<type value="dateTime"/>
-		<type value="decimal"/>
-		<type value="uri"/>
+        <type value="Coding"/>
+        <type value="string"/>
+        <type value="integer"/>
+        <type value="boolean"/>
+        <type value="dateTime"/>
+        <type value="decimal"/>
+        <type value="uri"/>
       </part>
     </part>
     <part>
-      <name value="originalMap"/>
+      <name value="originMap"/>
       <use value="out"/>
       <min value="0"/>
       <max value="1"/>
-      <documentation value="The canonical reference to the concept map from which this mapping comes from"/>
+      <documentation value="The canonical reference to the concept map from which this mapping is obtained."/>
       <type value="uri"/>
     </part>
   </parameter>
