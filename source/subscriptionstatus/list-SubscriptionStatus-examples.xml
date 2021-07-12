@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List xmlns="http://hl7.org/fhir">
+  <id value="SubscriptionStatus-examples"/>
+  <status value="current"/>
+  <mode value="working"/>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription Handshake message (first message on channel)"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-handshake"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/54f808cf-d159-4c9b-accb-c33eb20f0ecc"/>
+      <display value="Handshake"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription Heartbeat message (message with no event)"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-heartbeat"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/3d20ea4b-90dc-4d0d-b15a-c7a893389401"/>
+      <display value="Heartbeat"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription notification with payload: empty"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-empty"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/9601c07a-e34f-4945-93ca-6efb5394c995"/>
+      <display value="Notification Empty"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription notification with payload: id-only"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-id-only"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/3945182f-d315-4dbf-9259-09d863c7e7da"/>
+      <display value="Notification ID-Only"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription notification with payload: full-resource"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-full-resource"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/00b99077-2bda-436e-98cc-a4f65d6c2fe0"/>
+      <display value="Notification Full Resource"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Basic example of a SubscriptionStatus resource"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="subscriptionstatus-example"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/example"/>
+      <display value="Basic"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a Subscription Query-Status message (response to $status)"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-query-status"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/40464b74-fad0-4f45-ab60-e67f949c5e92"/>
+      <display value="Notification Query Status"/>
+    </item>
+  </entry>
+  <entry>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
+      <valueString value="Example of a notification wrapped in FHIR Messaging"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
+      <valueString value="notification-message-id-only"/>
+    </extension>
+    <item>
+      <reference value="SubscriptionStatus/0f322dbe-4f8d-4cbd-9ecb-bc8dc6f65f6a"/>
+      <display value="Message Notification"/>
+    </item>
+  </entry>
+</List>

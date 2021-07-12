@@ -1,0 +1,36 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<div>
+  <a name="scope"></a>
+  <h2>Scope and Usage</h2>
+  <p>
+    This document contains information about the <code>SubscriptionTopic</code> resource and details specific to options in it.  It is defined as part of the Pub/Sub (Publish / Subscribe) model of Subscriptions.
+  </p>
+  <p>
+    The <code>SubscriptionTopic</code> resource is used to define conceptual or computable events for <a href="subscription.html">Subscription</a> resources.  A <code>SubscriptionTopic</code> defines the <b>data</b> and <b>change</b> of interest, as well as allowed <b>filters</b> so that servers can implement specific functionality around subscriptions and clearly communicate boundaries to clients.  In other words, a <code>SubscriptionTopic</code> is a way of describing a state change to know what is of interest.  Because it describes a state change, a <code>SubscriptionTopic</code> is defined by:
+    <ul>
+      <li>
+        a resource-operation pair (e.g., Patient.create)
+      </li>
+      <li>
+        an expression evaluated against a state change (e.g., a change resulting in Patient.deceased having a value)
+      </li>
+      <li>
+        a well-defined existing event (e.g., Patient Admission per HL7v2 ADT^A01).
+      </li>
+    </ul>
+  </p>
+  <p>
+    Subscription Topics are intended to be discoverable, reusable, and extensible.  Definitions should be computably defined whenever possible, but the conceptual definition is the arbiter between any discrepancies.  For example, a query-based and a FHIRPath-based definition may differ slightly because of what is expressable in each language.  In such cases, the goal is correct implmentation of the concept - not literal translations between computable definitions.
+  </p>
+</div>
+
+<div>
+  <a name="bnr"></a>
+  <h2>Boundaries and Relationships</h2>
+  <p>
+    The <code>SubscriptionTopic</code> resource is used in the Pub/Sub (Publisher/Subscriber) model of FHIR Subscriptions.  Information about the Boundaries and Relationships both within the Subscriptions Framework and to other areas of the FHIR specification can be found <a href="subscriptions.html#bnr">here</a>.
+  </p>
+</div>
+
+</div>

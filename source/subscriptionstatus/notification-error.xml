@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SubscriptionStatus xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionStatus.xsd">
+  <id value="b21e4fae-ce73-45cb-8e37-1e203362b2ae"/>
+  <status value="error"/>
+  <type value="event-notification"/>
+  <eventsSinceSubscriptionStart value="328"/>
+  <eventsInNotification value="0"/>
+  <subscription>
+    <reference value="http://example.org/FHIR/R4/Subscription/123"/>
+  </subscription>
+  <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+  <error>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscription-error"/>
+      <code value="no-response"/>
+    </coding>
+  </error>
+  <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+</SubscriptionStatus>

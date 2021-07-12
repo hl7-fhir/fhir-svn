@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/Bundle.xsd">
+  <id value="3945182f-d315-4dbf-9259-09d863c7e7da"/>
+  <type value="history"/>
+  <timestamp value="2020-04-17T10:24:13.1882432-05:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:c144782b-da2f-4125-a9e2-9fa4b9085a40"/>
+    <resource>
+      <SubscriptionStatus xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionStatus.xsd">
+        <id value="c144782b-da2f-4125-a9e2-9fa4b9085a40"/>
+        <status value="active"/>
+        <type value="event-notification"/>
+        <eventsSinceSubscriptionStart value="310"/>
+        <eventsInNotification value="1"/>
+        <subscription>
+          <reference value="http://example.org/FHIR/R4/Subscription/123"/>
+        </subscription>
+        <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+      </SubscriptionStatus>
+    </resource>
+    <request>
+      <method value="GET" />
+      <url value="Subscription/123/$status" />
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.org/FHIR/R4/Encounter/2" />
+    <request>
+      <method value="PUT" />
+      <url value="Encounter/2" />
+    </request>
+    <response>
+      <status value="201"/>
+    </response>
+  </entry>
+</Bundle>

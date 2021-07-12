@@ -1,0 +1,33 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+  <div>
+    <a name="scope"></a>
+    <h2>Scope and Usage</h2>
+    <p>
+      This document contains information about the <code>SubscriptionStatus</code> resource and details specific to options in it. It is defined as part of the Pub/Sub (Publish / Subscribe) model of Subscriptions.
+    </p>
+    <p>
+      The <code>SubscriptionStatus</code> resource is used to convey information about the current state of a <a href="subscription.html">Subscription</a>.  Information contained within a <code>SubscriptionStatus</code> falls into three categories:
+      <ul>
+        <li>
+          Information to identify the relevant <code>Subscription</code> (e.g., a reference to a <code>Subscription</code>, <code>SubscriptionTopic</code>)
+        </li>
+        <li>
+          Information about the current state of the <code>Subscription</code> (e.g., Subscription status, number of events the Subscription has generated)
+        </li>
+        <li>
+          Information about a current notification (e.g., notification type, number of events in this notification)
+        </li>
+      </ul>
+    </p>
+  </div>
+
+  <div>
+    <a name="bnr"/>
+    <h2>Boundaries and Relationships</h2>
+    <p>
+      The <code>SubscriptionStatus</code> resource is used in the Subscriptions Framework. This resource is designed only to be used to convey state information about a subscription during various operations, for example included with notifications or as the result of a status request.
+    </p>
+  </div>
+
+</div>

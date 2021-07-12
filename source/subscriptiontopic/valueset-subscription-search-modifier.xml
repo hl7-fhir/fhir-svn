@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="subscription-search-modifier"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/subscription-search-modifier"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.3.1525"/>
+  </identifier>
+  <name value="SubscriptionSearchModifier"/>
+  <title value="Subscription Search Modifier"/>
+  <status value="active"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="FHIR search modifiers allowed for use in Subscriptions and SubscriptionTopics."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/subscription-search-modifier"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/Bundle.xsd">
+  <id value="9601c07a-e34f-4945-93ca-6efb5394c995"/>
+  <type value="history"/>
+  <timestamp value="2020-04-17T10:24:13.1882432-05:00" />
+  <entry>
+    <fullUrl value="urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae"/>
+    <resource>
+      <SubscriptionStatus xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionStatus.xsd">
+        <id value="b21e4fae-ce73-45cb-8e37-1e203362b2ae"/>
+        <status value="active"/>
+        <type value="event-notification"/>
+        <eventsSinceSubscriptionStart value="310"/>
+        <eventsInNotification value="0"/>
+        <subscription>
+          <reference value="http://example.org/FHIR/R4/Subscription/123"/>
+        </subscription>
+        <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+      </SubscriptionStatus>
+    </resource>
+    <request>
+      <method value="GET" />
+      <url value="Subscription/123/$status" />
+    </request>
+    <response>
+      <status value="200"/>
+    </response>
+  </entry>
+</Bundle>

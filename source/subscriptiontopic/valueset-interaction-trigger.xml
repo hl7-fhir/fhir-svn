@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="interaction-trigger"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/interaction-trigger"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.3.1460"/>
+  </identifier>
+  <name value="InteractionTrigger"/>
+  <title value="Interaction Trigger"/>
+  <status value="active"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="FHIR RESTful interaction codes used for SubscriptionTopic trigger."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/restful-interaction"/>
+      <concept>
+        <code value="create"/>
+      </concept>
+      <concept>
+        <code value="update"/>
+      </concept>
+      <concept>
+        <code value="delete"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubscriptionTopic xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionTopic.xsd">
+	<id value="admission"/>
+	<url value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+	<title value="admission"/>
+	<status value="active"/>
+  <description value="Example admission topic"/>
+	<resourceTrigger>
+		<description value="Encounter resource moving to state 'in-progress'"/>
+		<resourceType value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <supportedInteraction value="create"/>
+    <supportedInteraction value="update"/>
+		<queryCriteria>
+			<previous value="status:not=in-progress"/>
+      <resultForCreate value="test-passes"/>
+			<current value="status=in-progress"/>
+      <resultForDelete value="test-fails"/>
+			<requireBoth value="true"/>
+		</queryCriteria>
+		<fhirPathCriteria value="%previous.status!='in-progress' and %current.status='in-progress'"/>
+	</resourceTrigger>
+  <eventTrigger>
+    <description value="Patient admission is covered by HL7v2 ADT^A01"/>
+    <event>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0003"/>
+        <code value="A01"/>
+        <display value="ADT/ACK - Admit/visit notification"/>
+      </coding>
+    </event>
+  </eventTrigger>
+  <canFilterBy>
+    <description value="Matching based on the Patient (subject) of an Encounter or based on the Patient's group membership (in/not-in)."/>
+    <resourceType value="Encounter"/>
+    <parameterName value="patient"/>
+    <modifier value="=" />
+    <modifier value="in" />
+    <modifier value="not-in" />
+  </canFilterBy>
+  <notificationShape>
+    <resourceType value="Encounter"/>
+    <willInclude value="Encounter:patient"/>
+    <willInclude value="Encounter:practitioner"/>
+    <willInclude value="Encounter:service-provider"/>
+    <canInclude value="Encounter:account"/>
+    <canInclude value="Encounter:diagnosis"/>
+    <canInclude value="Encounter:location"/>
+  </notificationShape>
+</SubscriptionTopic>

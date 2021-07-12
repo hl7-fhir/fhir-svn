@@ -120,7 +120,7 @@
   </WorksheetOptions>
  </Worksheet>
  <Worksheet ss:Name="resources">
-  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="140" ss:StyleID="s65" x:FullColumns="1" x:FullRows="1">
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="142" ss:StyleID="s65" x:FullColumns="1" x:FullRows="1">
    <Column ss:AutoFitWidth="0" ss:StyleID="s65" ss:Width="158.0"/>
    <Column ss:AutoFitWidth="0" ss:StyleID="s65" ss:Width="198.0"/>
    <Column ss:AutoFitWidth="0" ss:StyleID="s65" ss:Width="98.0"/>
@@ -735,7 +735,6 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">SubstanceDefinition</Data></Cell>
    </Row>
-
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">VerificationResult</Data></Cell>
    </Row>
@@ -769,6 +768,12 @@
    <Row>
     <Cell><Data ss:Type="String">NutritionProduct</Data></Cell>
    </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SubscriptionStatus</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SubscriptionTopic</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -786,7 +791,7 @@
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>118</TopRowBottomPane>
+   <TopRowBottomPane>73</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    
    <ProtectObjects>False</ProtectObjects>

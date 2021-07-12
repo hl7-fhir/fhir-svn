@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="SubscriptionTopic-search-params"/>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-date"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.date"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-date"/>
+        <description value="Date status first applied"/>
+        <code value="date"/>
+        <type value="date"/>
+        <expression value="SubscriptionTopic.date"/>
+        <xpath value="f:SubscriptionTopic/f:date"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-derived-or-self"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.url,SubscriptionTopic.derivedFrom"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-derived-or-self"/>
+        <description value="A server defined search that matches either the url or derivedFrom"/>
+        <code value="derived-or-self"/>
+        <type value="uri"/>
+        <expression value="SubscriptionTopic.url | SubscriptionTopic.derivedFrom"/>
+        <xpath value="f:SubscriptionTopic/f:url | f:SubscriptionTopic/f:derivedFrom"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-identifier"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.identifier"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-identifier"/>
+        <description value="Business Identifier for SubscriptionTopic"/>
+        <code value="identifier"/>
+        <type value="token"/>
+        <expression value="SubscriptionTopic.identifier"/>
+        <xpath value="f:SubscriptionTopic/f:identifier"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-publisher"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.publisher"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-publisher"/>
+        <description value="The name of the individual or organization that published the SubscriptionTopic"/>
+        <code value="publisher"/>
+        <type value="reference"/>
+        <expression value="SubscriptionTopic.publisher"/>
+        <xpath value="f:SubscriptionTopic/f:publisher"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-resource-type"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.resourceTrigger.resourceType"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-resource-type"/>
+        <description value="Allowed Data type or Resource (reference to definition) for this definition"/>
+        <code value="resource-type"/>
+        <type value="uri"/>
+        <expression value="SubscriptionTopic.resourceTrigger.resourceType"/>
+        <xpath value="f:SubscriptionTopic/f:resourceTrigger/f:resourceType"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-status"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.status"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-status"/>
+        <description value="draft | active | retired | unknown"/>
+        <code value="status"/>
+        <type value="token"/>
+        <expression value="SubscriptionTopic.status"/>
+        <xpath value="f:SubscriptionTopic/f:status"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-title"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.title"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-title"/>
+        <description value="Name for this SubscriptionTopic (Human friendly)"/>
+        <code value="title"/>
+        <type value="string"/>
+        <expression value="SubscriptionTopic.title"/>
+        <xpath value="f:SubscriptionTopic/f:title"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-trigger-description"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.resourceTrigger.description"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-trigger-description"/>
+        <description value="Text representation of the trigger"/>
+        <code value="trigger-description"/>
+        <type value="string"/>
+        <expression value="SubscriptionTopic.resourceTrigger.description"/>
+        <xpath value="f:SubscriptionTopic/f:resourceTrigger/f:description"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-url"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.url"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-url"/>
+        <description value="Logical canonical URL to reference this SubscriptionTopic (globally unique)"/>
+        <code value="url"/>
+        <type value="uri"/>
+        <expression value="SubscriptionTopic.url"/>
+        <xpath value="f:SubscriptionTopic/f:url"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="SubscriptionTopic-version"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="SubscriptionTopic.version"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/SubscriptionTopic-version"/>
+        <description value="Business version of the SubscriptionTopic"/>
+        <code value="version"/>
+        <type value="token"/>
+        <expression value="SubscriptionTopic.version"/>
+        <xpath value="f:SubscriptionTopic/f:version"/>
+        <xpathUsage value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+</Bundle>

@@ -42,7 +42,12 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+  },
   "status" : "active",
+  "description" : "Value Set Contents (Expansion) for Device Metric and Component Types at Tue, Jun 29, 2021 14:15-0500",
   "expansion" : {
     "identifier" : "urn:uuid:d3871ebc-15e4-4a3f-8de0-a3be3035e836",
     "timestamp" : "2021-03-10T01:45:43.339Z",
@@ -91,5 +96,62 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code \"262688\" is not valid in the system urn:iso:std:iso:11073:10101; The code provided (urn:iso:std:iso:11073:10101#262688) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:11073:10101",
+  "code" : "150456",
+  "display" : "MDC_PULS_OXIM_SAT_O2"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "85353-1"
+      },
+      {
+        "code" : "9279-1"
+      },
+      {
+        "code" : "8867-4"
+      },
+      {
+        "code" : "2708-6"
+      },
+      {
+        "code" : "8310-5"
+      },
+      {
+        "code" : "8302-2"
+      },
+      {
+        "code" : "9843-4"
+      },
+      {
+        "code" : "29463-7"
+      },
+      {
+        "code" : "39156-5"
+      },
+      {
+        "code" : "85354-9"
+      },
+      {
+        "code" : "8480-6"
+      },
+      {
+        "code" : "8462-4"
+      },
+      {
+        "code" : "8478-0"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "MDC_PULS_OXIM_SAT_O2",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

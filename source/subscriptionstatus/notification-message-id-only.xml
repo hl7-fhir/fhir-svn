@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/Bundle.xsd">
+  <id value="0f322dbe-4f8d-4cbd-9ecb-bc8dc6f65f6a"/>
+  <type value="message"/>
+  <timestamp value="2020-04-17T10:24:13.1882432-05:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:801728e4-75e9-42e6-b6d0-0cc3e835a70d"/>
+    <resource>
+      <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/MessageHeader.xsd">
+        <id value="801728e4-75e9-42e6-b6d0-0cc3e835a70d"/>
+        <eventCoding>
+          <system value="http://example.org/fhir/message-events"/>
+          <code value="subscription-notification"/>
+        </eventCoding>
+        <source>
+          <endpoint value="http://example.org/FHIR/R4"/>
+        </source>
+        <focus>
+          <reference value="urn:uuid:c13b0b59-525c-4e41-b874-b5b87538a5b7"/>
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:c13b0b59-525c-4e41-b874-b5b87538a5b7"/>
+    <resource>
+      <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/Bundle.xsd">
+        <id value="c13b0b59-525c-4e41-b874-b5b87538a5b7"/>
+        <type value="history"/>
+        <timestamp value="2020-04-17T10:24:13.1882432-05:00"/>
+        <entry>
+          <fullUrl value="urn:uuid:bef7e5fb-b5ad-4b59-a618-1bace2bbf5c0"/>
+          <resource>
+            <SubscriptionStatus xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionStatus.xsd">
+              <id value="bef7e5fb-b5ad-4b59-a618-1bace2bbf5c0"/>
+              <status value="active"/>
+              <type value="event-notification"/>
+              <eventsSinceSubscriptionStart value="310"/>
+              <eventsInNotification value="1"/>
+              <subscription>
+                <reference value="http://example.org/FHIR/R4/Subscription/123"/>
+              </subscription>
+              <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+            </SubscriptionStatus>
+          </resource>
+          <request>
+            <method value="GET" />
+            <url value="Subscription/123/$status" />
+          </request>
+          <response>
+            <status value="200"/>
+          </response>
+        </entry>
+        <entry>
+          <fullUrl value="https://example.org/FHIR/R4/Encounter/2" />
+          <request>
+            <method value="PUT" />
+            <url value="Encounter/2" />
+          </request>
+          <response>
+            <status value="201"/>
+          </response>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+</Bundle>

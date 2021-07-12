@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SubscriptionStatus xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/SubscriptionStatus.xsd">
+	<id value="example"/>
+  <status value="active"/>
+  <type value="event-notification"/>
+  <eventsSinceSubscriptionStart value="1000"/>
+  <eventsInNotification value="1"/>
+  <subscription>
+    <reference value="http://example.org/FHIR/R4/Subscription/123"/>
+  </subscription>
+  <topic value="http://example.org/FHIR/R4/SubscriptionTopic/admission"/>
+  <!-- insert contents here -->
+  
+</SubscriptionStatus>

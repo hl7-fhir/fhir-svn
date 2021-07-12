@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="SubscriptionStatus"/>
+  <meta>
+    <lastUpdated value="2021-01-02T08:58:31.578+11:00"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+    <valueString value="Foundation.Other"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+    <valueCode value="business"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/build/StructureDefinition/entered-in-error-status">
+    <valueCode value=".status = entered-in-error"/>
+  </extension>
+  <url value="http://hl7.org/fhir/StructureDefinition/SubscriptionStatus"/>
+  <version value="4.1.0"/>
+  <name value="SubscriptionStatus"/>
+  <status value="draft"/>
+  <date value="2021-01-02T08:58:31+11:00"/>
+  <publisher value="Health Level Seven International (FHIR Infrastructure)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/fiwg/index.cfm"/>
+    </telecom>
+  </contact>
+  <description value="The SubscriptionStatus resource describes the state of a Subscription during notifications."/>
+  <fhirVersion value="4.1.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/fivews"/>
+    <name value="FiveWs Pattern Mapping"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="SubscriptionStatus"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+  <derivation value="specialization"/>
+  <differential>
+    <element id="SubscriptionStatus">
+      <path value="SubscriptionStatus"/>
+      <short value="Status information about a Subscription provided during event notification"/>
+      <definition value="The SubscriptionStatus resource describes the state of a Subscription during notifications."/>
+      <min value="0"/>
+      <max value="*"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="infrastructure.exchange"/>
+      </mapping>
+    </element>
+    <element id="SubscriptionStatus.status">
+      <path value="SubscriptionStatus.status"/>
+      <short value="requested | active | error | off | entered-in-error"/>
+      <definition value="The status of the subscription, which marks the server state for managing the subscription."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="SubscriptionStatus"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The status of a subscription at the time this notification was generated."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/subscription-status"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.status"/>
+      </mapping>
+    </element>
+    <element id="SubscriptionStatus.type">
+      <path value="SubscriptionStatus.type"/>
+      <short value="handshake | heartbeat | event-notification | query-status"/>
+      <definition value="The type of event being conveyed with this notificaiton."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isModifierReason value="Not known why this is labelled a modifier"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="SubscriptionNotificationType"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The type of notification represented by the status message."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/subscription-notification-type"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.what[x]"/>
+      </mapping>
+    </element>
+    <element id="SubscriptionStatus.eventsSinceSubscriptionStart">
+      <path value="SubscriptionStatus.eventsSinceSubscriptionStart"/>
+      <short value="Events since the Subscription was created"/>
+      <definition value="The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="SubscriptionStatus.eventsInNotification">
+      <path value="SubscriptionStatus.eventsInNotification"/>
+      <short value="The number of actual notifications represented by this bundle"/>
+      <definition value="The total number of actual events represented within this notification.  For handshake and heartbeat notifications, this will be zero or not present.  For event-notifications, this number may be one or more, depending on server batching."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="SubscriptionStatus.subscription">
+      <path value="SubscriptionStatus.subscription"/>
+      <short value="Reference to the Subscription responsible for this notification"/>
+      <definition value="The reference to the Subscription which generated this notification."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Subscription"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.why[x]"/>
+      </mapping>
+    </element>
+    <element id="SubscriptionStatus.topic">
+      <path value="SubscriptionStatus.topic"/>
+      <short value="Reference to the SubscriptionTopic this notification relates to"/>
+      <definition value="The reference to the SubscriptionTopic for the Subscription which generated this notification."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="canonical"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SubscriptionTopic"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="SubscriptionStatus.error">
+      <path value="SubscriptionStatus.error"/>
+      <short value="List of errors on the subscription"/>
+      <definition value="A record of errors that occurred when the server processed a notification."/>
+      <comment value="Recommended practice: clear errors when status is updated."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="SubscriptionError"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes to represent subscription error details."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/subscription-error"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
