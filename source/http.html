@@ -1708,7 +1708,7 @@ can use to assist with deployment/debugging purposes:
 The request id in <code>X-Request-Id</code> is purely to help connect between
 requests and logs/audit trails. The client can assign an id to the request,
 and send that in the X-Request-Id header. The server can either use that 
-id or assign it's own, which it returns as the <code>X-Request-Id</code> header
+id or assign its own, which it returns as the <code>X-Request-Id</code> header
 in the response. When the server assigned id is different to the 
 client assigned id, the server SHOULD also return the <code>X-Correlation-Id</code>
 header with the client's original id in it. 
