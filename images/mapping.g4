@@ -149,14 +149,15 @@ fhirPath
     : literal       // insert reference to FhirPath grammar here
     ;
 
-    literal
-        : INTEGER
-        | NUMBER
-        | STRING
-        | DATETIME
-        | TIME
-        | BOOL
-        ;
+literal
+    : INTEGER
+    | NUMBER
+    | STRING
+    | DATETIME
+    | DATE
+    | TIME
+    | BOOL
+    ;
 
 groupTypeMode
     : 'types' | 'type+'
@@ -212,29 +213,28 @@ BOOL
         | 'false'
         ;
 
+DATE
+        : '@' DATEFORMAT
+        ;
+
 DATETIME
-        : '@'
-            [0-9][0-9][0-9][0-9] // year
-            (
-                '-'[0-9][0-9] // month
-                (
-                    '-'[0-9][0-9] // day
-                    (
-                        'T' TIMEFORMAT
-                    )?
-                 )?
-             )?
-             'Z'? // UTC specifier
+        : '@' DATEFORMAT 'T' (TIMEFORMAT TIMEZONEOFFSETFORMAT?)?
         ;
 
 TIME
         : '@' 'T' TIMEFORMAT
         ;
 
+fragment DATEFORMAT
+        : [0-9][0-9][0-9][0-9] ('-'[0-9][0-9] ('-'[0-9][0-9])?)?
+        ;
+
 fragment TIMEFORMAT
-        :
-            [0-9][0-9] (':'[0-9][0-9] (':'[0-9][0-9] ('.'[0-9]+)?)?)?
-            ('Z' | ('+' | '-') [0-9][0-9]':'[0-9][0-9])? // timezone
+        : [0-9][0-9] (':'[0-9][0-9] (':'[0-9][0-9] ('.'[0-9]+)?)?)?
+        ;
+
+fragment TIMEZONEOFFSETFORMAT
+        : ('Z' | ('+' | '-') [0-9][0-9]':'[0-9][0-9])
         ;
 
 IDENTIFIER

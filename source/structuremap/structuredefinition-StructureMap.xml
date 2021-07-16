@@ -1093,6 +1093,15 @@
       <type>
         <code value="decimal"/>
       </type>
+      <type>
+        <code value="date"/>
+      </type>
+      <type>
+        <code value="time"/>
+      </type>
+      <type>
+        <code value="dateTime"/>
+      </type>
       <isSummary value="true"/>
     </element>
     <element id="StructureMap.group.rule.rule">
