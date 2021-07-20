@@ -231,6 +231,7 @@
       <path value="DeviceDefinition.classification"/>
       <short value="What kind of device or device system this is"/>
       <definition value="What kind of device or device system this is."/>
+      <comment value="In this element various classifications can be used, such as GMDN, EMDN, SNOMED CT, risk classes, national product codes."/>
       <min value="0"/>
       <max value="*"/>
       <type>
