@@ -569,17 +569,400 @@
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="Statistic"/>
+        <code value="BackboneElement"/>
       </type>
     </element>
-    <element id="Evidence.distribution">
-      <path value="Evidence.distribution"/>
-      <short value="An ordered group of statistics"/>
-      <definition value="An ordered group of statistics."/>
+    <element id="Evidence.statistic.description">
+      <path value="Evidence.statistic.description"/>
+      <short value="Description of content"/>
+      <definition value="A description of the content value of the statistic"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.note">
+      <path value="Evidence.statistic.note"/>
+      <short value="Footnotes and/or explanatory notes"/>
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="OrderedDistribution"/>
+        <code value="Annotation"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.statisticType">
+      <path value="Evidence.statistic.statisticType"/>
+      <short value="Type of statistic, eg relative risk"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="StatisticType"/>
+        </extension>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/statistic-type"/>
+      </binding>
+    </element>
+    <element id="Evidence.statistic.category">
+      <path value="Evidence.statistic.category"/>
+      <short value="Associated category for categorical variable"/>
+      <definition value="When the measured variable is handled categorically, the category element is used to define which category the statistic is reporting"/>
+      <comment value="Simple strings can be used for descriptive purposes. Exact matching to EvidenceVariable.category.name for the Evidence.variableDefinition[variableRole=measuredVariable].observed=Reference(EvidenceVariable) could facilitate validation within datasets."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.quantity">
+      <path value="Evidence.statistic.quantity"/>
+      <short value="Statistic value"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.numberOfEvents">
+      <path value="Evidence.statistic.numberOfEvents"/>
+      <short value="The number of events associated with the statistic"/>
+      <definition value="The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants"/>
+      <comment value="When the number of events is the statistic, use Evidence.statistic.quantity and set Evidence.statistic.type.coding.code=C25463 and Evidence.statistic.type.coding.display=Count. When the statistic is an Event Rate (where individual participants may have 2 or more events), use Evidence.statistic.numberOfEvents to record the total number of events rather than the number of participants with events."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.numberAffected">
+      <path value="Evidence.statistic.numberAffected"/>
+      <short value="The number of participants affected"/>
+      <definition value="The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants"/>
+      <comment value="When the number affected is the statistic, use Evidence.statistic.quantity and set Evidence.statistic.type.coding.code=C25463 and Evidence.statistic.type.coding.display=Count. When the statistic is a Proportion, use Evidence.statistic.numberAffected and enter an integer as the value. When the statistic is an Event Rate (where individual participants may have 2 or more events), use Evidence.statistic.numberAffected to record the number of participants with events rather than the total number of events."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize">
+      <extension url="http://hl7.org/fhir/build/StructureDefinition/uml-dir">
+        <valueCode value="100;100"/>
+      </extension>
+      <path value="Evidence.statistic.sampleSize"/>
+      <short value="Number of samples in the statistic"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize.description">
+      <path value="Evidence.statistic.sampleSize.description"/>
+      <short value="Textual description of sample size for statistic"/>
+      <definition value="Human-readable summary of population sample size"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize.note">
+      <path value="Evidence.statistic.sampleSize.note"/>
+      <short value="Footnote or explanatory note about the sample size"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Annotation"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize.numberOfStudies">
+      <path value="Evidence.statistic.sampleSize.numberOfStudies"/>
+      <short value="Number of contributing studies"/>
+      <definition value="Number of participants in the population"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize.numberOfParticipants">
+      <path value="Evidence.statistic.sampleSize.numberOfParticipants"/>
+      <short value="Cumulative number of participants"/>
+      <definition value="A human-readable string to clarify or explain concepts about the sample size"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.sampleSize.knownDataCount">
+      <path value="Evidence.statistic.sampleSize.knownDataCount"/>
+      <short value="Number of participants with known results for measured variables"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate">
+      <extension url="http://hl7.org/fhir/build/StructureDefinition/uml-dir">
+        <valueCode value="300;100"/>
+      </extension>
+      <path value="Evidence.statistic.attributeEstimate"/>
+      <short value="An attribute of the Statistic"/>
+      <definition value="A statistical attribute of the statistic such as a measure of heterogeneity"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.description">
+      <path value="Evidence.statistic.attributeEstimate.description"/>
+      <short value="Textual description of the attribute estimate"/>
+      <definition value="Human-readable summary of the estimate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.note">
+      <path value="Evidence.statistic.attributeEstimate.note"/>
+      <short value="Footnote or explanatory note about the estimate"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Annotation"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.type">
+      <path value="Evidence.statistic.attributeEstimate.type"/>
+      <short value="The type of attribute estimate, eg confidence interval or p value"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="StatisticAttributeEstimateType"/>
+        </extension>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/attribute-estimate-type"/>
+      </binding>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.quantity">
+      <path value="Evidence.statistic.attributeEstimate.quantity"/>
+      <short value="The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure"/>
+      <comment value="Often the p value"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.level">
+      <path value="Evidence.statistic.attributeEstimate.level"/>
+      <short value="Level of confidence interval, eg 0.95 for 95% confidence interval"/>
+      <definition value="Use 95 for a 95% confidence interval"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.range">
+      <path value="Evidence.statistic.attributeEstimate.range"/>
+      <short value="Lower and upper bound values of the attribute estimate"/>
+      <definition value="Lower bound of confidence interval"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Range"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate"/>
+      <short value="A nested attribute estimate; which is the attribute estimate of an attribute estimate"/>
+      <definition value="A nested attribute estimate; which is the attribute estimate of an attribute estimate"/>
+      <comment value="A nested attribute estimate; which is the attribute estimate of an attribute estimate"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.description">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.description"/>
+      <short value="Textual description of the attribute estimate"/>
+      <definition value="Human-readable summary of the estimate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.note">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.note"/>
+      <short value="Footnote or explanatory note about the estimate"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Annotation"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.type">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.type"/>
+      <short value="The type of attribute estimate, eg confidence interval or p value"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="StatisticAttributeEstimateType"/>
+        </extension>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/attribute-estimate-type"/>
+      </binding>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.quantity">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.quantity"/>
+      <short value="The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure"/>
+      <comment value="Often the pvalue"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.level">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.level"/>
+      <short value="Level of confidence interval, eg 0.95 for 95% confidence interval"/>
+      <definition value="Use 95 for a 95% confidence interval"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.attributeEstimate.attributeEstimate.range">
+      <path value="Evidence.statistic.attributeEstimate.attributeEstimate.range"/>
+      <short value="Lower and upper bound values of the attribute estimate"/>
+      <definition value="Lower bound of confidence interval"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Range"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic">
+      <path value="Evidence.statistic.modelCharacteristic"/>
+      <short value="Model characteristic"/>
+      <definition value="A component of the method to generate the statistic"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.code">
+      <path value="Evidence.statistic.modelCharacteristic.code"/>
+      <short value="Model specification"/>
+      <definition value="Description of a component of the method to generate the statistic"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="StatisticModelCode"/>
+        </extension>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/statistic-model-code"/>
+      </binding>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.value">
+      <path value="Evidence.statistic.modelCharacteristic.value"/>
+      <short value="Numerical value to complete model specification"/>
+      <definition value="Further specification of the quantified value of the component of the method to generate the statistic"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable">
+      <path value="Evidence.statistic.modelCharacteristic.variable"/>
+      <short value="A variable adjusted for in the adjusted analysis"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable.variableDefinition">
+      <path value="Evidence.statistic.modelCharacteristic.variable.variableDefinition"/>
+      <short value="Description of the variable"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EvidenceVariable"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable.handling">
+      <path value="Evidence.statistic.modelCharacteristic.variable.handling"/>
+      <short value="continuous | dichotomous | ordinal | polychotomous"/>
+      <definition value="How the variable is classified for use in adjusted analysis"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="EvidenceVariableHandling"/>
+        </extension>
+        <strength value="required"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/variable-handling"/>
+      </binding>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable.valueCategory">
+      <path value="Evidence.statistic.modelCharacteristic.variable.valueCategory"/>
+      <short value="Description for grouping of ordinal or polychotomous variables"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable.valueQuantity">
+      <path value="Evidence.statistic.modelCharacteristic.variable.valueQuantity"/>
+      <short value="Discrete value for grouping of ordinal or polychotomous variables"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Evidence.statistic.modelCharacteristic.variable.valueRange">
+      <path value="Evidence.statistic.modelCharacteristic.variable.valueRange"/>
+      <short value="Range of values for grouping of ordinal or polychotomous variables"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Range"/>
       </type>
     </element>
     <element id="Evidence.certainty">
